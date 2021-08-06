@@ -58,7 +58,7 @@ namespace TCC.Forms
         {
             TbLogin.Clear();
             TbPassword.Clear();
-            this.Show();
+            Show();
             TbLogin.Focus();
         }
 
@@ -70,7 +70,7 @@ namespace TCC.Forms
                 acs.Acessar(TbLogin.Text, TbPassword.Text);
                 if (acs.exist)
                 {
-                    this.Hide();
+                    Hide();
                     FrmSplash splash = new FrmSplash();
                     splash.ShowDialog();
                     FrmMain main = new FrmMain();
@@ -101,7 +101,7 @@ namespace TCC.Forms
         private void FrmLogin_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            SendMessage(Handle, 0x112, 0xf012, 0);
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
