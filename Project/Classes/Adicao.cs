@@ -9,16 +9,19 @@ using System.Data.OleDb;
 
 namespace APP.Classes
 {
-    class Adicao
+    internal class Adicao
     {
         #region Variables and Instances
-        Connection conn = new Connection();
-        OleDbCommand cmd = new OleDbCommand();
-        #endregion
+
+        private Connection conn = new Connection();
+        private OleDbCommand cmd = new OleDbCommand();
+
+        #endregion Variables and Instances
 
         #region Methods
+
         public Adicao(string login)
-        { 
+        {
             cmd.CommandText = "insert into Adicao values('" + login + "', 0, 0, 0)";
 
             try
@@ -32,6 +35,7 @@ namespace APP.Classes
                 System.Windows.Forms.MessageBox.Show("Erro ao cadastrar");
             }
         }
-        #endregion
+
+        #endregion Methods
     }
 }
