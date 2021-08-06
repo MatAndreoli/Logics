@@ -22,7 +22,7 @@ namespace APP.Classes
 
         public Adicao(string login)
         {
-            cmd.CommandText = "insert into Adicao(loginA, acertos, erros) values('" + login + "', 1, 2)";
+            cmd.CommandText = "insert into Adicao values('" + login + "', 0, 0, 0)";
 
             try
             {
