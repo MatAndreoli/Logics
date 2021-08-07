@@ -147,30 +147,6 @@ namespace APP
             OpenChild(new Forms.FrmConfiguracoes(), sender);
         }
 
-        private void PbExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void PbMini_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void PbMax_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            PbMax.Visible = false;
-            PbRestore.Visible = true;
-        }
-
-        private void PbRestore_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            PbRestore.Visible = false;
-            PbMax.Visible = true;
-        }
-
         private void PnUpper_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -187,5 +163,10 @@ namespace APP
             LblHour.Text = DateTime.Now.ToString("HH:mm:ss");
         }
         #endregion
+
+        private void CbClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

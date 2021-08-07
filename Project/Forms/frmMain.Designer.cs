@@ -44,10 +44,6 @@ namespace APP
             this.Guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PnUpper = new Guna.UI2.WinForms.Guna2Panel();
             this.IpbPage = new FontAwesome.Sharp.IconPictureBox();
-            this.PbMini = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.PbMax = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.PbRestore = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.PbExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.LblTitle = new System.Windows.Forms.Label();
             this.PnPai = new Guna.UI2.WinForms.Guna2Panel();
             this.LblDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -56,16 +52,14 @@ namespace APP
             this.PbLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.TimerHora = new System.Windows.Forms.Timer(this.components);
             this.TimerEntrar = new System.Windows.Forms.Timer(this.components);
+            this.CbClose = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.CbMini = new Guna.UI2.WinForms.Guna2ControlBox();
             this.PnMenu.SuspendLayout();
             this.PnLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Guna2PictureBox1)).BeginInit();
             this.PnUpper.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IpbPage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbMini)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbMax)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbRestore)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbExit)).BeginInit();
             this.PnPai.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbMarca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
@@ -267,7 +261,7 @@ namespace APP
             // 
             this.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.Guna2PictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("Guna2PictureBox2.Image")));
+            this.Guna2PictureBox2.Image = global::TCC.Properties.Resources.Logics_Logotipo;
             this.Guna2PictureBox2.ImageRotate = 0F;
             this.Guna2PictureBox2.Location = new System.Drawing.Point(104, 0);
             this.Guna2PictureBox2.Name = "Guna2PictureBox2";
@@ -282,7 +276,7 @@ namespace APP
             // 
             this.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.Guna2PictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("Guna2PictureBox1.Image")));
+            this.Guna2PictureBox1.Image = global::TCC.Properties.Resources.GradiLogics_Logotipo;
             this.Guna2PictureBox1.ImageRotate = 0F;
             this.Guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.Guna2PictureBox1.Name = "Guna2PictureBox1";
@@ -296,11 +290,9 @@ namespace APP
             // PnUpper
             // 
             this.PnUpper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.PnUpper.Controls.Add(this.CbMini);
+            this.PnUpper.Controls.Add(this.CbClose);
             this.PnUpper.Controls.Add(this.IpbPage);
-            this.PnUpper.Controls.Add(this.PbMini);
-            this.PnUpper.Controls.Add(this.PbMax);
-            this.PnUpper.Controls.Add(this.PbRestore);
-            this.PnUpper.Controls.Add(this.PbExit);
             this.PnUpper.Controls.Add(this.LblTitle);
             this.PnUpper.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnUpper.Location = new System.Drawing.Point(209, 0);
@@ -324,63 +316,6 @@ namespace APP
             this.IpbPage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.IpbPage.TabIndex = 5;
             this.IpbPage.TabStop = false;
-            // 
-            // PbMini
-            // 
-            this.PbMini.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PbMini.FillColor = System.Drawing.Color.Transparent;
-            this.PbMini.Image = ((System.Drawing.Image)(resources.GetObject("PbMini.Image")));
-            this.PbMini.ImageRotate = 0F;
-            this.PbMini.Location = new System.Drawing.Point(608, 0);
-            this.PbMini.Name = "PbMini";
-            this.PbMini.ShadowDecoration.Parent = this.PbMini;
-            this.PbMini.Size = new System.Drawing.Size(16, 16);
-            this.PbMini.TabIndex = 4;
-            this.PbMini.TabStop = false;
-            this.PbMini.Click += new System.EventHandler(this.PbMini_Click);
-            // 
-            // PbMax
-            // 
-            this.PbMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PbMax.FillColor = System.Drawing.Color.Transparent;
-            this.PbMax.Image = ((System.Drawing.Image)(resources.GetObject("PbMax.Image")));
-            this.PbMax.ImageRotate = 0F;
-            this.PbMax.Location = new System.Drawing.Point(627, 0);
-            this.PbMax.Name = "PbMax";
-            this.PbMax.ShadowDecoration.Parent = this.PbMax;
-            this.PbMax.Size = new System.Drawing.Size(16, 16);
-            this.PbMax.TabIndex = 3;
-            this.PbMax.TabStop = false;
-            this.PbMax.Click += new System.EventHandler(this.PbMax_Click);
-            // 
-            // PbRestore
-            // 
-            this.PbRestore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PbRestore.FillColor = System.Drawing.Color.Transparent;
-            this.PbRestore.Image = ((System.Drawing.Image)(resources.GetObject("PbRestore.Image")));
-            this.PbRestore.ImageRotate = 0F;
-            this.PbRestore.Location = new System.Drawing.Point(627, 0);
-            this.PbRestore.Name = "PbRestore";
-            this.PbRestore.ShadowDecoration.Parent = this.PbRestore;
-            this.PbRestore.Size = new System.Drawing.Size(16, 16);
-            this.PbRestore.TabIndex = 2;
-            this.PbRestore.TabStop = false;
-            this.PbRestore.Visible = false;
-            this.PbRestore.Click += new System.EventHandler(this.PbRestore_Click);
-            // 
-            // PbExit
-            // 
-            this.PbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PbExit.FillColor = System.Drawing.Color.Transparent;
-            this.PbExit.Image = ((System.Drawing.Image)(resources.GetObject("PbExit.Image")));
-            this.PbExit.ImageRotate = 0F;
-            this.PbExit.Location = new System.Drawing.Point(646, 0);
-            this.PbExit.Name = "PbExit";
-            this.PbExit.ShadowDecoration.Parent = this.PbExit;
-            this.PbExit.Size = new System.Drawing.Size(16, 16);
-            this.PbExit.TabIndex = 1;
-            this.PbExit.TabStop = false;
-            this.PbExit.Click += new System.EventHandler(this.PbExit_Click);
             // 
             // LblTitle
             // 
@@ -438,7 +373,7 @@ namespace APP
             this.PbMarca.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PbMarca.BackColor = System.Drawing.Color.Transparent;
             this.PbMarca.Cursor = System.Windows.Forms.Cursors.Default;
-            this.PbMarca.Image = ((System.Drawing.Image)(resources.GetObject("PbMarca.Image")));
+            this.PbMarca.Image = global::TCC.Properties.Resources.Logics;
             this.PbMarca.ImageRotate = 0F;
             this.PbMarca.Location = new System.Drawing.Point(349, 96);
             this.PbMarca.Name = "PbMarca";
@@ -453,7 +388,7 @@ namespace APP
             this.PbLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PbLogo.BackColor = System.Drawing.Color.Transparent;
             this.PbLogo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.PbLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbLogo.Image")));
+            this.PbLogo.Image = global::TCC.Properties.Resources.Logotipo;
             this.PbLogo.ImageRotate = 0F;
             this.PbLogo.Location = new System.Drawing.Point(245, 96);
             this.PbLogo.Name = "PbLogo";
@@ -472,6 +407,32 @@ namespace APP
             // 
             this.TimerEntrar.Interval = 30;
             this.TimerEntrar.Tick += new System.EventHandler(this.TimerEntrar_Tick);
+            // 
+            // CbClose
+            // 
+            this.CbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CbClose.FillColor = System.Drawing.Color.Transparent;
+            this.CbClose.HoverState.Parent = this.CbClose;
+            this.CbClose.IconColor = System.Drawing.Color.White;
+            this.CbClose.Location = new System.Drawing.Point(631, 0);
+            this.CbClose.Name = "CbClose";
+            this.CbClose.ShadowDecoration.Parent = this.CbClose;
+            this.CbClose.Size = new System.Drawing.Size(30, 30);
+            this.CbClose.TabIndex = 6;
+            this.CbClose.Click += new System.EventHandler(this.CbClose_Click);
+            // 
+            // CbMini
+            // 
+            this.CbMini.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CbMini.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.CbMini.FillColor = System.Drawing.Color.Transparent;
+            this.CbMini.HoverState.Parent = this.CbMini;
+            this.CbMini.IconColor = System.Drawing.Color.White;
+            this.CbMini.Location = new System.Drawing.Point(595, 0);
+            this.CbMini.Name = "CbMini";
+            this.CbMini.ShadowDecoration.Parent = this.CbMini;
+            this.CbMini.Size = new System.Drawing.Size(30, 30);
+            this.CbMini.TabIndex = 7;
             // 
             // FrmMain
             // 
@@ -495,10 +456,6 @@ namespace APP
             this.PnUpper.ResumeLayout(false);
             this.PnUpper.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IpbPage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbMini)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbMax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbRestore)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbExit)).EndInit();
             this.PnPai.ResumeLayout(false);
             this.PnPai.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbMarca)).EndInit();
@@ -522,10 +479,6 @@ namespace APP
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private Guna.UI2.WinForms.Guna2Panel PnPai;
-        private Guna.UI2.WinForms.Guna2PictureBox PbExit;
-        private Guna.UI2.WinForms.Guna2PictureBox PbMini;
-        private Guna.UI2.WinForms.Guna2PictureBox PbMax;
-        private Guna.UI2.WinForms.Guna2PictureBox PbRestore;
         private FontAwesome.Sharp.IconPictureBox IpbPage;
         private Guna.UI2.WinForms.Guna2PictureBox PbMarca;
         private Guna.UI2.WinForms.Guna2PictureBox PbLogo;
@@ -533,6 +486,8 @@ namespace APP
         private Guna.UI2.WinForms.Guna2HtmlLabel LblHour;
         private System.Windows.Forms.Timer TimerHora;
         private System.Windows.Forms.Timer TimerEntrar;
+        private Guna.UI2.WinForms.Guna2ControlBox CbClose;
+        private Guna.UI2.WinForms.Guna2ControlBox CbMini;
     }
 }
 

@@ -190,5 +190,38 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\GradiLogics Logotipo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Logics Logotipo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Logics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Icons\exclamation-mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Icons\inside.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Icons\maximize-size-option.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Icons\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Icons\resize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Icons\restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Icons\Wclose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Logotipo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
