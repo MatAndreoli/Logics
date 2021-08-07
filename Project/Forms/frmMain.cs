@@ -1,10 +1,10 @@
 ﻿using APP.Classes;
-using TCC.Forms;
-using System;
-using System.Windows.Forms;
 using FontAwesome.Sharp;
+using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
+using TCC.Forms;
 
 namespace APP
 {
@@ -12,17 +12,21 @@ namespace APP
     {
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(IntPtr hwnd, int wmsg, int wparam, int lparam);
-                
+
         #region Variables and Instances
+
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form activeForm;
         private DateTime dt = new DateTime();
-        #endregion
+
+        #endregion Variables and Instances
 
         #region Methods
+
         public FrmMain()
         {
             InitializeComponent();
@@ -151,7 +155,7 @@ namespace APP
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        } 
+        }
 
         private void TimerEntrar_Tick(object sender, EventArgs e)
         {
@@ -162,7 +166,8 @@ namespace APP
         {
             LblHour.Text = DateTime.Now.ToString("HH:mm:ss");
         }
-        #endregion
+
+        #endregion Methods
 
         private void CbClose_Click(object sender, EventArgs e)
         {
