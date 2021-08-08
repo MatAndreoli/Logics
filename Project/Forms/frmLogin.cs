@@ -329,11 +329,11 @@ namespace TCC.Forms
             if (Opacity == 100) TimerEntrar.Stop();
         }
 
-        #endregion Methods
-
         private void CbExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+        #endregion Methods
     }
 }
