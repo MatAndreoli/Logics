@@ -30,9 +30,11 @@ namespace TCC.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation4 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.PnlLogo = new Guna.UI2.WinForms.Guna2Panel();
+            this.PbLogo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.PbMarca = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PnlLogin = new Guna.UI2.WinForms.Guna2Panel();
             this.BtnCad = new Guna.UI2.WinForms.Guna2Button();
             this.BtnLogin = new Guna.UI2.WinForms.Guna2Button();
@@ -49,16 +51,14 @@ namespace TCC.Forms
             this.TbPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.TbUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.BtnCadastrar = new Guna.UI2.WinForms.Guna2Button();
+            this.CbExit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.TimerEntrar = new System.Windows.Forms.Timer(this.components);
-            this.PbExit = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.PbLogo = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.PbMarca = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.ElipseFrmLogin = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.PnlLogo.SuspendLayout();
-            this.PnlLogin.SuspendLayout();
-            this.PnlCad.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PbExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbMarca)).BeginInit();
+            this.PnlLogin.SuspendLayout();
+            this.PnlCad.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlLogo
@@ -72,6 +72,38 @@ namespace TCC.Forms
             this.PnlLogo.ShadowDecoration.Parent = this.PnlLogo;
             this.PnlLogo.Size = new System.Drawing.Size(281, 450);
             this.PnlLogo.TabIndex = 0;
+            // 
+            // PbLogo
+            // 
+            this.PbLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PbLogo.BackColor = System.Drawing.Color.Transparent;
+            this.PbLogo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Anima.SetDecoration(this.PbLogo, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.PbLogo.Image = global::TCC.Properties.Resources.Logotipo;
+            this.PbLogo.ImageRotate = 0F;
+            this.PbLogo.Location = new System.Drawing.Point(64, 80);
+            this.PbLogo.Name = "PbLogo";
+            this.PbLogo.ShadowDecoration.Parent = this.PbLogo;
+            this.PbLogo.Size = new System.Drawing.Size(150, 140);
+            this.PbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbLogo.TabIndex = 11;
+            this.PbLogo.TabStop = false;
+            // 
+            // PbMarca
+            // 
+            this.PbMarca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PbMarca.BackColor = System.Drawing.Color.Transparent;
+            this.PbMarca.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Anima.SetDecoration(this.PbMarca, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.PbMarca.Image = global::TCC.Properties.Resources.Logics;
+            this.PbMarca.ImageRotate = 0F;
+            this.PbMarca.Location = new System.Drawing.Point(36, 166);
+            this.PbMarca.Name = "PbMarca";
+            this.PbMarca.ShadowDecoration.Parent = this.PbMarca;
+            this.PbMarca.Size = new System.Drawing.Size(200, 190);
+            this.PbMarca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbMarca.TabIndex = 12;
+            this.PbMarca.TabStop = false;
             // 
             // PnlLogin
             // 
@@ -213,22 +245,22 @@ namespace TCC.Forms
             // 
             this.Anima.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
             this.Anima.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.Anima.DefaultAnimation = animation1;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.Anima.DefaultAnimation = animation4;
             // 
             // PnlCad
             // 
@@ -528,57 +560,29 @@ namespace TCC.Forms
             this.BtnCadastrar.MouseEnter += new System.EventHandler(this.BtnCadastrar_MouseEnter);
             this.BtnCadastrar.MouseLeave += new System.EventHandler(this.BtnCadastrar_MouseLeave);
             // 
+            // CbExit
+            // 
+            this.CbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Anima.SetDecoration(this.CbExit, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.CbExit.FillColor = System.Drawing.Color.Transparent;
+            this.CbExit.HoverState.Parent = this.CbExit;
+            this.CbExit.IconColor = System.Drawing.Color.White;
+            this.CbExit.Location = new System.Drawing.Point(705, 1);
+            this.CbExit.Name = "CbExit";
+            this.CbExit.ShadowDecoration.Parent = this.CbExit;
+            this.CbExit.Size = new System.Drawing.Size(30, 30);
+            this.CbExit.TabIndex = 2;
+            this.CbExit.Click += new System.EventHandler(this.CbExit_Click);
+            // 
             // TimerEntrar
             // 
             this.TimerEntrar.Interval = 30;
             this.TimerEntrar.Tick += new System.EventHandler(this.TimerEntrar_Tick);
             // 
-            // PbExit
+            // ElipseFrmLogin
             // 
-            this.PbExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Anima.SetDecoration(this.PbExit, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.PbExit.FillColor = System.Drawing.Color.Transparent;
-            this.PbExit.Image = ((System.Drawing.Image)(resources.GetObject("PbExit.Image")));
-            this.PbExit.ImageRotate = 0F;
-            this.PbExit.Location = new System.Drawing.Point(719, 1);
-            this.PbExit.Name = "PbExit";
-            this.PbExit.ShadowDecoration.Parent = this.PbExit;
-            this.PbExit.Size = new System.Drawing.Size(16, 16);
-            this.PbExit.TabIndex = 2;
-            this.PbExit.TabStop = false;
-            this.PbExit.Click += new System.EventHandler(this.PbExit_Click);
-            // 
-            // PbLogo
-            // 
-            this.PbLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PbLogo.BackColor = System.Drawing.Color.Transparent;
-            this.PbLogo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Anima.SetDecoration(this.PbLogo, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.PbLogo.Image = global::TCC.Properties.Resources.Logotipo;
-            this.PbLogo.ImageRotate = 0F;
-            this.PbLogo.Location = new System.Drawing.Point(64, 80);
-            this.PbLogo.Name = "PbLogo";
-            this.PbLogo.ShadowDecoration.Parent = this.PbLogo;
-            this.PbLogo.Size = new System.Drawing.Size(150, 140);
-            this.PbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbLogo.TabIndex = 11;
-            this.PbLogo.TabStop = false;
-            // 
-            // PbMarca
-            // 
-            this.PbMarca.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PbMarca.BackColor = System.Drawing.Color.Transparent;
-            this.PbMarca.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Anima.SetDecoration(this.PbMarca, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.PbMarca.Image = global::TCC.Properties.Resources.Logics;
-            this.PbMarca.ImageRotate = 0F;
-            this.PbMarca.Location = new System.Drawing.Point(36, 166);
-            this.PbMarca.Name = "PbMarca";
-            this.PbMarca.ShadowDecoration.Parent = this.PbMarca;
-            this.PbMarca.Size = new System.Drawing.Size(200, 190);
-            this.PbMarca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbMarca.TabIndex = 12;
-            this.PbMarca.TabStop = false;
+            this.ElipseFrmLogin.BorderRadius = 12;
+            this.ElipseFrmLogin.TargetControl = this;
             // 
             // FrmLogin
             // 
@@ -586,7 +590,7 @@ namespace TCC.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(738, 500);
-            this.Controls.Add(this.PbExit);
+            this.Controls.Add(this.CbExit);
             this.Controls.Add(this.PnlCad);
             this.Controls.Add(this.PnlLogin);
             this.Controls.Add(this.PnlLogo);
@@ -600,11 +604,10 @@ namespace TCC.Forms
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmLogin_MouseDown);
             this.PnlLogo.ResumeLayout(false);
-            this.PnlLogin.ResumeLayout(false);
-            this.PnlCad.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PbExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbMarca)).EndInit();
+            this.PnlLogin.ResumeLayout(false);
+            this.PnlCad.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -629,8 +632,9 @@ namespace TCC.Forms
         private Guna.UI2.WinForms.Guna2TextBox TbPass;
         private Guna.UI2.WinForms.Guna2PictureBox PbMarca;
         private Guna.UI2.WinForms.Guna2PictureBox PbLogo;
-        private Guna.UI2.WinForms.Guna2PictureBox PbExit;
         private Guna.UI2.WinForms.Guna2Button BtnVoltar;
         private System.Windows.Forms.Timer TimerEntrar;
+        private Guna.UI2.WinForms.Guna2Elipse ElipseFrmLogin;
+        private Guna.UI2.WinForms.Guna2ControlBox CbExit;
     }
 }

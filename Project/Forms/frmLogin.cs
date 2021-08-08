@@ -93,11 +93,6 @@ namespace TCC.Forms
             TimerEntrar.Start();
         }
 
-        private void PbExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void FrmLogin_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -335,5 +330,10 @@ namespace TCC.Forms
         }
 
         #endregion Methods
+
+        private void CbExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

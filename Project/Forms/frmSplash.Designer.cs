@@ -38,6 +38,7 @@ namespace APP.Forms
             this.Guna2ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.Guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.ElipseFrmSplash = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +59,7 @@ namespace APP.Forms
             this.LblUsername.AutoSize = true;
             this.LblUsername.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUsername.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LblUsername.Location = new System.Drawing.Point(315, 279);
+            this.LblUsername.Location = new System.Drawing.Point(262, 279);
             this.LblUsername.Name = "LblUsername";
             this.LblUsername.Size = new System.Drawing.Size(174, 39);
             this.LblUsername.TabIndex = 2;
@@ -81,7 +82,7 @@ namespace APP.Forms
             this.Guna2ProgressBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(60)))));
             this.Guna2ProgressBar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guna2ProgressBar1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Guna2ProgressBar1.Location = new System.Drawing.Point(102, 333);
+            this.Guna2ProgressBar1.Location = new System.Drawing.Point(102, 361);
             this.Guna2ProgressBar1.Name = "Guna2ProgressBar1";
             this.Guna2ProgressBar1.ProgressColor = System.Drawing.Color.Cyan;
             this.Guna2ProgressBar1.ProgressColor2 = System.Drawing.Color.Fuchsia;
@@ -121,6 +122,11 @@ namespace APP.Forms
             this.Guna2PictureBox1.TabIndex = 10;
             this.Guna2PictureBox1.TabStop = false;
             // 
+            // ElipseFrmSplash
+            // 
+            this.ElipseFrmSplash.BorderRadius = 12;
+            this.ElipseFrmSplash.TargetControl = this;
+            // 
             // FrmSplash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,5 +160,6 @@ namespace APP.Forms
         private Guna.UI2.WinForms.Guna2ProgressBar Guna2ProgressBar1;
         private Guna.UI2.WinForms.Guna2PictureBox Guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2PictureBox Guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Elipse ElipseFrmSplash;
     }
 }

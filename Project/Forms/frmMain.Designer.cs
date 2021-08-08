@@ -43,6 +43,8 @@ namespace APP
             this.Guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PnUpper = new Guna.UI2.WinForms.Guna2Panel();
+            this.CbMini = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.CbClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.IpbPage = new FontAwesome.Sharp.IconPictureBox();
             this.LblTitle = new System.Windows.Forms.Label();
             this.PnPai = new Guna.UI2.WinForms.Guna2Panel();
@@ -52,8 +54,7 @@ namespace APP
             this.PbLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.TimerHora = new System.Windows.Forms.Timer(this.components);
             this.TimerEntrar = new System.Windows.Forms.Timer(this.components);
-            this.CbClose = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.CbMini = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.ElipseFrmMain = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.PnMenu.SuspendLayout();
             this.PnLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Guna2PictureBox2)).BeginInit();
@@ -302,6 +303,32 @@ namespace APP
             this.PnUpper.TabIndex = 7;
             this.PnUpper.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnUpper_MouseDown);
             // 
+            // CbMini
+            // 
+            this.CbMini.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CbMini.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.CbMini.FillColor = System.Drawing.Color.Transparent;
+            this.CbMini.HoverState.Parent = this.CbMini;
+            this.CbMini.IconColor = System.Drawing.Color.White;
+            this.CbMini.Location = new System.Drawing.Point(601, 0);
+            this.CbMini.Name = "CbMini";
+            this.CbMini.ShadowDecoration.Parent = this.CbMini;
+            this.CbMini.Size = new System.Drawing.Size(30, 30);
+            this.CbMini.TabIndex = 7;
+            // 
+            // CbClose
+            // 
+            this.CbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CbClose.FillColor = System.Drawing.Color.Transparent;
+            this.CbClose.HoverState.Parent = this.CbClose;
+            this.CbClose.IconColor = System.Drawing.Color.White;
+            this.CbClose.Location = new System.Drawing.Point(631, 0);
+            this.CbClose.Name = "CbClose";
+            this.CbClose.ShadowDecoration.Parent = this.CbClose;
+            this.CbClose.Size = new System.Drawing.Size(30, 30);
+            this.CbClose.TabIndex = 6;
+            this.CbClose.Click += new System.EventHandler(this.CbClose_Click);
+            // 
             // IpbPage
             // 
             this.IpbPage.BackColor = System.Drawing.Color.Transparent;
@@ -408,31 +435,10 @@ namespace APP
             this.TimerEntrar.Interval = 30;
             this.TimerEntrar.Tick += new System.EventHandler(this.TimerEntrar_Tick);
             // 
-            // CbClose
+            // ElipseFrmMain
             // 
-            this.CbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CbClose.FillColor = System.Drawing.Color.Transparent;
-            this.CbClose.HoverState.Parent = this.CbClose;
-            this.CbClose.IconColor = System.Drawing.Color.White;
-            this.CbClose.Location = new System.Drawing.Point(631, 0);
-            this.CbClose.Name = "CbClose";
-            this.CbClose.ShadowDecoration.Parent = this.CbClose;
-            this.CbClose.Size = new System.Drawing.Size(30, 30);
-            this.CbClose.TabIndex = 6;
-            this.CbClose.Click += new System.EventHandler(this.CbClose_Click);
-            // 
-            // CbMini
-            // 
-            this.CbMini.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CbMini.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.CbMini.FillColor = System.Drawing.Color.Transparent;
-            this.CbMini.HoverState.Parent = this.CbMini;
-            this.CbMini.IconColor = System.Drawing.Color.White;
-            this.CbMini.Location = new System.Drawing.Point(595, 0);
-            this.CbMini.Name = "CbMini";
-            this.CbMini.ShadowDecoration.Parent = this.CbMini;
-            this.CbMini.Size = new System.Drawing.Size(30, 30);
-            this.CbMini.TabIndex = 7;
+            this.ElipseFrmMain.BorderRadius = 12;
+            this.ElipseFrmMain.TargetControl = this;
             // 
             // FrmMain
             // 
@@ -443,6 +449,7 @@ namespace APP
             this.Controls.Add(this.PnPai);
             this.Controls.Add(this.PnUpper);
             this.Controls.Add(this.PnMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMain";
             this.Opacity = 0D;
@@ -488,6 +495,7 @@ namespace APP
         private System.Windows.Forms.Timer TimerEntrar;
         private Guna.UI2.WinForms.Guna2ControlBox CbClose;
         private Guna.UI2.WinForms.Guna2ControlBox CbMini;
+        private Guna.UI2.WinForms.Guna2Elipse ElipseFrmMain;
     }
 }
 
