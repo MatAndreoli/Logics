@@ -7,12 +7,14 @@ using System.Drawing;
 
 namespace APP.Classes
 {
-    class ThemeColor
+    internal class ThemeColor
     {
         #region Variables and Instances
+
         public static Color PrimaryColor { get; set; }
-        Random rand = new Random();
+        private Random rand = new Random();
         private int colorIndex;
+
         public static List<string> ColorList = new List<string>()
         {
             "#7bed9f",
@@ -33,9 +35,11 @@ namespace APP.Classes
             "#5352ed",
             "#3742fa"
         };
-        #endregion
+
+        #endregion Variables and Instances
 
         #region Methods
+
         public Color SelectColor()
         {
             int index = rand.Next(ColorList.Count);
@@ -47,6 +51,7 @@ namespace APP.Classes
             string color = ColorList[index];
             return ColorTranslator.FromHtml(color);
         }
-        #endregion
+
+        #endregion Methods
     }
 }
