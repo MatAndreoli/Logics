@@ -319,7 +319,9 @@ namespace APP
             // CbClose
             // 
             this.CbClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CbClose.BorderRadius = 5;
             this.CbClose.FillColor = System.Drawing.Color.Transparent;
+            this.CbClose.HoverState.FillColor = System.Drawing.Color.Red;
             this.CbClose.HoverState.Parent = this.CbClose;
             this.CbClose.IconColor = System.Drawing.Color.White;
             this.CbClose.Location = new System.Drawing.Point(631, 0);
