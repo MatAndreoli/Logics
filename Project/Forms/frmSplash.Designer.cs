@@ -98,7 +98,7 @@ namespace APP.Forms
             // 
             this.Guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.Guna2PictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("Guna2PictureBox2.Image")));
+            this.Guna2PictureBox2.Image = global::TCC.Properties.Resources.Logics_Logotipo;
             this.Guna2PictureBox2.ImageRotate = 0F;
             this.Guna2PictureBox2.Location = new System.Drawing.Point(341, 128);
             this.Guna2PictureBox2.Name = "Guna2PictureBox2";
@@ -112,7 +112,7 @@ namespace APP.Forms
             // 
             this.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.Guna2PictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("Guna2PictureBox1.Image")));
+            this.Guna2PictureBox1.Image = global::TCC.Properties.Resources.GradiLogics_Logotipo;
             this.Guna2PictureBox1.ImageRotate = 0F;
             this.Guna2PictureBox1.Location = new System.Drawing.Point(389, 93);
             this.Guna2PictureBox1.Name = "Guna2PictureBox1";

@@ -267,7 +267,7 @@ namespace TCC.Forms
             TbConfPass.BorderColor = color;
             if (TbConfPass.Text != TbPass.Text)
             {
-                TbConfPass.IconRight = Image.FromFile(@"Img\Icons\exclamation-mark.png");
+                TbConfPass.IconRight = Properties.Resources.exclamation_mark;
                 TbConfPass.BorderColor = Color.Red;
                 TbPass.BorderColor = Color.Red;
             }
