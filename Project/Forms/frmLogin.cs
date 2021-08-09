@@ -18,12 +18,6 @@ namespace TCC.Forms
 
         #endregion Variables and Instances
 
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(IntPtr hwnd, int wmsg, int wparam, int lparam);
-
         #region Methods
 
         public FrmLogin()
@@ -91,12 +85,6 @@ namespace TCC.Forms
             Connection con = new Connection();
             con.Connect();
             TimerEntrar.Start();
-        }
-
-        private void FrmLogin_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(Handle, 0x112, 0xf012, 0);
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
