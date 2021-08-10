@@ -57,7 +57,7 @@ namespace TCC.Forms
             this.TbResposta.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TbResposta.HoverState.Parent = this.TbResposta;
             this.TbResposta.Location = new System.Drawing.Point(269, 248);
-            this.TbResposta.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TbResposta.Margin = new System.Windows.Forms.Padding(5);
             this.TbResposta.Name = "TbResposta";
             this.TbResposta.PasswordChar = '\0';
             this.TbResposta.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -109,7 +109,7 @@ namespace TCC.Forms
             this.LblTime.BackColor = System.Drawing.Color.Transparent;
             this.LblTime.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTime.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LblTime.Location = new System.Drawing.Point(550, 22);
+            this.LblTime.Location = new System.Drawing.Point(56, 22);
             this.LblTime.Name = "LblTime";
             this.LblTime.Size = new System.Drawing.Size(17, 47);
             this.LblTime.TabIndex = 11;
@@ -127,7 +127,7 @@ namespace TCC.Forms
             this.BtnStart.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BtnStart.ForeColor = System.Drawing.Color.White;
             this.BtnStart.HoverState.Parent = this.BtnStart;
-            this.BtnStart.Location = new System.Drawing.Point(291, 22);
+            this.BtnStart.Location = new System.Drawing.Point(541, 22);
             this.BtnStart.Name = "BtnStart";
             this.BtnStart.ShadowDecoration.Parent = this.BtnStart;
             this.BtnStart.Size = new System.Drawing.Size(103, 27);
@@ -148,7 +148,7 @@ namespace TCC.Forms
             this.Controls.Add(this.TbResposta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAdicao";
-            this.Text = "Adicao";
+            this.Text = "Adição";
             this.Load += new System.EventHandler(this.FrmAdicao_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
