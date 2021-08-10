@@ -66,13 +66,12 @@ namespace TCC.Forms
             BtnCheck.Enabled = false;
         }
 
-        public bool CheckAnswer()
+        public void CheckAnswer()
         {
             if (TbResposta.Text == "")
             {
                 MessageBox.Show("Digite um número.");
                 TbResposta.Focus();
-                return false;
             }
             else if (num1 + num2 == Convert.ToInt32(TbResposta.Text))
             {
@@ -82,7 +81,6 @@ namespace TCC.Forms
                 StartNumbers();
                 TbResposta.Clear();
                 TbResposta.Focus();
-                return true;
             }
             else
             {
@@ -91,7 +89,6 @@ namespace TCC.Forms
                 MessageBox.Show("Resposta Incorreta.");
                 TbResposta.Clear();
                 TbResposta.Focus();
-                return false;
             }
         }
     }
