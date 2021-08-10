@@ -100,29 +100,35 @@
     <Compile Include="Classes\ThemeColor.cs" />
     <Compile Include="Classes\UserDados.cs" />
     <Compile Include="Classes\Validacao.cs" />
-    <Compile Include="Forms\frmConfiguracoes.cs">
+    <Compile Include="Forms\FrmAdicao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmConfiguracoes.Designer.cs">
-      <DependentUpon>frmConfiguracoes.cs</DependentUpon>
+    <Compile Include="Forms\FrmAdicao.Designer.cs">
+      <DependentUpon>FrmAdicao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmLogin.cs">
+    <Compile Include="Forms\FrmConfiguracoes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <Compile Include="Forms\FrmConfiguracoes.Designer.cs">
+      <DependentUpon>FrmConfiguracoes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmMain.cs">
+    <Compile Include="Forms\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <Compile Include="Forms\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmSplash.cs">
+    <Compile Include="Forms\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmSplash.Designer.cs">
-      <DependentUpon>frmSplash.cs</DependentUpon>
+    <Compile Include="Forms\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSplash.Designer.cs">
+      <DependentUpon>FrmSplash.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -131,17 +137,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Usuario.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\frmConfiguracoes.resx">
-      <DependentUpon>frmConfiguracoes.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmConfiguracoes.resx">
+      <DependentUpon>FrmConfiguracoes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmSplash.resx">
-      <DependentUpon>frmSplash.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmSplash.resx">
+      <DependentUpon>FrmSplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
