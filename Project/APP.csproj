@@ -137,6 +137,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Usuario.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\FrmAdicao.resx">
+      <DependentUpon>FrmAdicao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmConfiguracoes.resx">
       <DependentUpon>FrmConfiguracoes.cs</DependentUpon>
     </EmbeddedResource>

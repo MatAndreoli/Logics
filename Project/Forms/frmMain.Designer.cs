@@ -38,7 +38,7 @@ namespace APP
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.IBtnAdicao = new FontAwesome.Sharp.IconButton();
             this.PnLogo = new Guna.UI2.WinForms.Guna2Panel();
             this.Guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -75,7 +75,7 @@ namespace APP
             this.PnMenu.Controls.Add(this.iconButton4);
             this.PnMenu.Controls.Add(this.iconButton3);
             this.PnMenu.Controls.Add(this.iconButton2);
-            this.PnMenu.Controls.Add(this.iconButton1);
+            this.PnMenu.Controls.Add(this.IBtnAdicao);
             this.PnMenu.Controls.Add(this.PnLogo);
             this.PnMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PnMenu.Location = new System.Drawing.Point(0, 0);
@@ -224,28 +224,29 @@ namespace APP
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = true;
             // 
-            // iconButton1
+            // IBtnAdicao
             // 
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 32;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 97);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton1.Size = new System.Drawing.Size(209, 60);
-            this.iconButton1.TabIndex = 8;
-            this.iconButton1.Text = "iconButton1";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.IBtnAdicao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IBtnAdicao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.IBtnAdicao.FlatAppearance.BorderSize = 0;
+            this.IBtnAdicao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IBtnAdicao.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IBtnAdicao.ForeColor = System.Drawing.Color.Gainsboro;
+            this.IBtnAdicao.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.IBtnAdicao.IconColor = System.Drawing.Color.Gainsboro;
+            this.IBtnAdicao.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IBtnAdicao.IconSize = 32;
+            this.IBtnAdicao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.IBtnAdicao.Location = new System.Drawing.Point(0, 97);
+            this.IBtnAdicao.Name = "IBtnAdicao";
+            this.IBtnAdicao.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.IBtnAdicao.Size = new System.Drawing.Size(209, 60);
+            this.IBtnAdicao.TabIndex = 8;
+            this.IBtnAdicao.Text = "Adição";
+            this.IBtnAdicao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.IBtnAdicao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IBtnAdicao.UseVisualStyleBackColor = true;
+            this.IBtnAdicao.Click += new System.EventHandler(this.IBtnAdicao_Click);
             // 
             // PnLogo
             // 
@@ -478,7 +479,7 @@ namespace APP
         private Guna.UI2.WinForms.Guna2Panel PnLogo;
         private Guna.UI2.WinForms.Guna2PictureBox Guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox Guna2PictureBox2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton IBtnAdicao;
         private Guna.UI2.WinForms.Guna2Panel PnUpper;
         private System.Windows.Forms.Label LblTitle;
         private FontAwesome.Sharp.IconButton IbtnLogout;

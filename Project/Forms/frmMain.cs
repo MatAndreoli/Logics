@@ -167,11 +167,16 @@ namespace APP
             LblHour.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
-        #endregion Methods
-
         private void CbClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+        private void IBtnAdicao_Click(object sender, EventArgs e)
+        {
+            OpenChild(new FrmAdicao(), sender);
+        }
+
+        #endregion Methods
     }
 }
