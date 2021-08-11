@@ -29,9 +29,7 @@ namespace APP.Classes
 
         public bool ValidarLogin(string login, string senha)
         {
-            cmd.CommandText = "select * from Login where login =@login  and senha = @senha";
-            cmd.Parameters.AddWithValue("@login", login);
-            cmd.Parameters.AddWithValue("@senha", senha);
+            cmd.CommandText = "select * from Login WHERE(((StrComp([Login].[login], '" + login + "', 0)) = 0)) and (((StrComp([Login].[senha], '" + senha + "', 0)) = 0)); ";
             cmd.CommandType = CommandType.Text;
 
             try
