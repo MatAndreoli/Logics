@@ -73,6 +73,7 @@ namespace TCC.Forms
             this.LblN1.BackColor = System.Drawing.Color.Transparent;
             this.LblN1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblN1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.LblN1.IsSelectionEnabled = false;
             this.LblN1.Location = new System.Drawing.Point(291, 98);
             this.LblN1.Name = "LblN1";
             this.LblN1.Size = new System.Drawing.Size(21, 56);
@@ -109,6 +110,7 @@ namespace TCC.Forms
             this.LblTime.BackColor = System.Drawing.Color.Transparent;
             this.LblTime.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTime.ForeColor = System.Drawing.Color.Gainsboro;
+            this.LblTime.IsSelectionEnabled = false;
             this.LblTime.Location = new System.Drawing.Point(56, 22);
             this.LblTime.Name = "LblTime";
             this.LblTime.Size = new System.Drawing.Size(17, 47);
