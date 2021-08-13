@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using APP.Classes;
+using TCC.Classes;
 
 namespace TCC.Forms
 {
     public partial class FrmAdicao : Form
     {
         private Random rand = new Random();
-        private int num1, num2, timeLeft;
+        private int num1, num2, timeLeft, certas = 0, errado = 0, total = 0;
 
         public FrmAdicao()
         {
@@ -30,7 +32,7 @@ namespace TCC.Forms
             if (timeLeft > 0)
             {
                 timeLeft--;
-                LblTime.Text = timeLeft.ToString() + " segundos";
+                LblTime.Text = "0:" + timeLeft.ToString();
             }
             else
             {
@@ -44,18 +46,31 @@ namespace TCC.Forms
 
         private void BtnStart_Click(object sender, EventArgs e)
         {
-            timeLeft = 40;
+            timeLeft = 70;
             StartNumbers();
             timer1.Start();
             BtnCheck.Enabled = true;
+            TbResposta.Enabled = true;
             TbResposta.ReadOnly = false;
             TbResposta.Clear();
+            certas = 0;
+            errado = 0;
+            total = 0;
+            PrgPontos.Value = 0;
+        }
+
+        private void TbResposta_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                CheckAnswer();
+            }
         }
 
         public void StartNumbers()
         {
-            num1 = rand.Next(101);
-            num2 = rand.Next(101);
+            num1 = rand.Next(1, 10);
+            num2 = rand.Next(1, 10);
 
             LblN1.Text = num1.ToString() + " + " + num2.ToString();
         }
@@ -64,6 +79,7 @@ namespace TCC.Forms
         {
             TbResposta.ReadOnly = true;
             BtnCheck.Enabled = false;
+            PrgPontos.Value = 0;
         }
 
         public void CheckAnswer()
@@ -77,18 +93,37 @@ namespace TCC.Forms
             {
                 TbResposta.BorderColor = Color.FromArgb(213, 218, 223);
                 TbResposta.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-                MessageBox.Show("Certo.");
                 StartNumbers();
                 TbResposta.Clear();
                 TbResposta.Focus();
+                certas++;
+                total++;
+                PrgPontos.Value++;
+                if (PrgPontos.Value == 10)
+                {
+                    timer1.Stop();
+                    TbResposta.Enabled = false;
+                    UpdateAdicao ad = new UpdateAdicao(certas, errado);
+                    string result = string.Format("Total:{0} Certas:{1} Erradas:{2}", total, certas, errado);
+                    MessageBox.Show(result);
+                }
             }
             else
             {
                 TbResposta.FocusedState.BorderColor = Color.Red;
                 TbResposta.BorderColor = Color.Red;
-                MessageBox.Show("Resposta Incorreta.");
                 TbResposta.Clear();
                 TbResposta.Focus();
+                errado++;
+                total++;
+                if (PrgPontos.Value == 0)
+                {
+                    PrgPontos.Value = 0;
+                }
+                else
+                {
+                    PrgPontos.Value--;
+                }
             }
         }
     }

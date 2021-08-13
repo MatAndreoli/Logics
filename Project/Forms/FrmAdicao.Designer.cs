@@ -36,6 +36,7 @@ namespace TCC.Forms
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.LblTime = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.BtnStart = new Guna.UI2.WinForms.Guna2Button();
+            this.PrgPontos = new Guna.UI2.WinForms.Guna2VProgressBar();
             this.SuspendLayout();
             // 
             // TbResposta
@@ -52,7 +53,7 @@ namespace TCC.Forms
             this.TbResposta.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
             this.TbResposta.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TbResposta.FocusedState.Parent = this.TbResposta;
-            this.TbResposta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbResposta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.TbResposta.ForeColor = System.Drawing.Color.Gainsboro;
             this.TbResposta.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TbResposta.HoverState.Parent = this.TbResposta;
@@ -67,6 +68,7 @@ namespace TCC.Forms
             this.TbResposta.Size = new System.Drawing.Size(177, 27);
             this.TbResposta.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.TbResposta.TabIndex = 6;
+            this.TbResposta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbResposta_KeyDown);
             // 
             // LblN1
             // 
@@ -76,9 +78,9 @@ namespace TCC.Forms
             this.LblN1.IsSelectionEnabled = false;
             this.LblN1.Location = new System.Drawing.Point(291, 98);
             this.LblN1.Name = "LblN1";
-            this.LblN1.Size = new System.Drawing.Size(21, 56);
+            this.LblN1.Size = new System.Drawing.Size(99, 56);
             this.LblN1.TabIndex = 7;
-            this.LblN1.Text = "?";
+            this.LblN1.Text = "0 + 0";
             // 
             // BtnCheck
             // 
@@ -113,9 +115,9 @@ namespace TCC.Forms
             this.LblTime.IsSelectionEnabled = false;
             this.LblTime.Location = new System.Drawing.Point(56, 22);
             this.LblTime.Name = "LblTime";
-            this.LblTime.Size = new System.Drawing.Size(17, 47);
+            this.LblTime.Size = new System.Drawing.Size(66, 47);
             this.LblTime.TabIndex = 11;
-            this.LblTime.Text = "?";
+            this.LblTime.Text = "0:00";
             // 
             // BtnStart
             // 
@@ -137,12 +139,31 @@ namespace TCC.Forms
             this.BtnStart.Text = "Começar";
             this.BtnStart.Click += new System.EventHandler(this.BtnStart_Click);
             // 
+            // PrgPontos
+            // 
+            this.PrgPontos.BorderRadius = 15;
+            this.PrgPontos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(60)))));
+            this.PrgPontos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.PrgPontos.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.PrgPontos.Location = new System.Drawing.Point(56, 139);
+            this.PrgPontos.Maximum = 10;
+            this.PrgPontos.Name = "PrgPontos";
+            this.PrgPontos.ProgressColor = System.Drawing.Color.Cyan;
+            this.PrgPontos.ProgressColor2 = System.Drawing.Color.Fuchsia;
+            this.PrgPontos.ShadowDecoration.Parent = this.PrgPontos;
+            this.PrgPontos.ShowPercentage = true;
+            this.PrgPontos.Size = new System.Drawing.Size(25, 267);
+            this.PrgPontos.TabIndex = 15;
+            this.PrgPontos.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.PrgPontos.Value = 5;
+            // 
             // FrmAdicao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.PrgPontos);
             this.Controls.Add(this.BtnStart);
             this.Controls.Add(this.LblTime);
             this.Controls.Add(this.LblN1);
@@ -165,5 +186,6 @@ namespace TCC.Forms
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2HtmlLabel LblTime;
         private Guna.UI2.WinForms.Guna2Button BtnStart;
+        private Guna.UI2.WinForms.Guna2VProgressBar PrgPontos;
     }
 }

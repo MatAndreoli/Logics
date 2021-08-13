@@ -98,6 +98,7 @@
     <Compile Include="Classes\Cadastro.cs" />
     <Compile Include="Classes\Adicao.cs" />
     <Compile Include="Classes\ThemeColor.cs" />
+    <Compile Include="Classes\UpdateAdicao.cs" />
     <Compile Include="Classes\UserDados.cs" />
     <Compile Include="Classes\Validacao.cs" />
     <Compile Include="Forms\FrmAdicao.cs">
