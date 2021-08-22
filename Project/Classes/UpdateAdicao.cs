@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using APP.Acesso;
-using System.Data.OleDb;
+﻿using APP.Acesso;
 using APP.Classes;
+using System.Data.OleDb;
 
 namespace TCC.Classes
 {
@@ -13,8 +8,6 @@ namespace TCC.Classes
     {
         private Connection conn = new Connection();
         private OleDbCommand cmd = new OleDbCommand();
-        public static int Acerto { get; set; }
-        public static int Erro { get; set; }
         public int acertoUp, erroUp;
 
         public void AdicaoUpdate(int certo, int errado)
