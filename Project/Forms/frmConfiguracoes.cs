@@ -20,10 +20,10 @@ namespace APP.Forms
         }
         private void LoadUserData()
         {
-            LblUser.Text = UserDados.login;
-            LblEmail.Text = UserDados.email;
-            LblNome.Text = UserDados.nome + " " + UserDados.sobrenome;
-            LblIdade.Text = Convert.ToString(UserDados.idade) + " anos";
+            LblUser.Text = UserDados.Login;
+            LblEmail.Text = UserDados.Email;
+            LblNome.Text = UserDados.Nome + " " + UserDados.Sobrenome;
+            LblIdade.Text = Convert.ToString(UserDados.Idade) + " anos";
         }
         private void FrmConfiguracoes_Load(object sender, EventArgs e)
         {

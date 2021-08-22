@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace APP.Classes
 {
-    class UserDados
+    internal class UserDados
     {
-        public static string login { get; set; }
-        public static string nome { get; set; }
-        public static string sobrenome { get; set; }
-        public static int idade { get; set; }
-        public static string email { get; set; }
+        public static string Login { get; set; }
+        public static string Nome { get; set; }
+        public static string Sobrenome { get; set; }
+        public static int Idade { get; set; }
+        public static string Email { get; set; }
+        public static int AcertoAdicao { get; set; }
+        public static int ErroAdicao { get; set; }
+        public static int TotalAdicao { get; set; }
     }
 }

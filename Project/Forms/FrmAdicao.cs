@@ -103,9 +103,8 @@ namespace TCC.Forms
                 {
                     timer1.Stop();
                     TbResposta.Enabled = false;
-                    UpdateAdicao ad = new UpdateAdicao(certas, errado);
-                    string result = string.Format("Total:{0} Certas:{1} Erradas:{2}", total, certas, errado);
-                    MessageBox.Show(result);
+                    UpdateAdicao ad = new UpdateAdicao();
+                    ad.AdicaoUpdate(certas, errado);
                 }
             }
             else

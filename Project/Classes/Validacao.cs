@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
+﻿using APP.Acesso;
 using System.Data;
-using APP.Acesso;
-using System.Text.RegularExpressions;
 using System.Data.OleDb;
+using System.Text.RegularExpressions;
 
 namespace APP.Classes
 {
@@ -41,11 +35,11 @@ namespace APP.Classes
                 {
                     while (read.Read())
                     {
-                        UserDados.login = read.GetString(0);
-                        UserDados.nome = read.GetString(2);
-                        UserDados.sobrenome = read.GetString(3);
-                        UserDados.idade = read.GetInt32(4);
-                        UserDados.email = read.GetString(5);
+                        UserDados.Login = read.GetString(0);
+                        UserDados.Nome = read.GetString(2);
+                        UserDados.Sobrenome = read.GetString(3);
+                        UserDados.Idade = read.GetInt32(4);
+                        UserDados.Email = read.GetString(5);
                     }
                     exist = true;
                 }

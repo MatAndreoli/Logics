@@ -21,7 +21,7 @@ namespace APP.Forms
 
         private void FrmSplash_Load(object sender, EventArgs e)
         {
-            LblUsername.Text = UserDados.nome + " " + UserDados.sobrenome;
+            LblUsername.Text = UserDados.Nome + " " + UserDados.Sobrenome;
             Opacity = 0.0;
             Guna2ProgressBar1.Value = 0;
             Guna2ProgressBar1.Minimum = 0;
