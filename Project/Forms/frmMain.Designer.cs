@@ -379,7 +379,7 @@ namespace APP
             this.LblDate.Enabled = false;
             this.LblDate.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDate.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LblDate.Location = new System.Drawing.Point(139, 237);
+            this.LblDate.Location = new System.Drawing.Point(103, 237);
             this.LblDate.Name = "LblDate";
             this.LblDate.Size = new System.Drawing.Size(452, 38);
             this.LblDate.TabIndex = 12;
@@ -392,7 +392,7 @@ namespace APP
             this.LblHour.Enabled = false;
             this.LblHour.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblHour.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LblHour.Location = new System.Drawing.Point(290, 192);
+            this.LblHour.Location = new System.Drawing.Point(254, 192);
             this.LblHour.Name = "LblHour";
             this.LblHour.Size = new System.Drawing.Size(113, 38);
             this.LblHour.TabIndex = 11;
@@ -405,7 +405,7 @@ namespace APP
             this.PbMarca.Cursor = System.Windows.Forms.Cursors.Default;
             this.PbMarca.Image = global::TCC.Properties.Resources.Logics;
             this.PbMarca.ImageRotate = 0F;
-            this.PbMarca.Location = new System.Drawing.Point(349, 96);
+            this.PbMarca.Location = new System.Drawing.Point(313, 96);
             this.PbMarca.Name = "PbMarca";
             this.PbMarca.ShadowDecoration.Parent = this.PbMarca;
             this.PbMarca.Size = new System.Drawing.Size(100, 90);
@@ -420,7 +420,7 @@ namespace APP
             this.PbLogo.Cursor = System.Windows.Forms.Cursors.Default;
             this.PbLogo.Image = global::TCC.Properties.Resources.Logotipo;
             this.PbLogo.ImageRotate = 0F;
-            this.PbLogo.Location = new System.Drawing.Point(245, 96);
+            this.PbLogo.Location = new System.Drawing.Point(209, 96);
             this.PbLogo.Name = "PbLogo";
             this.PbLogo.ShadowDecoration.Parent = this.PbLogo;
             this.PbLogo.Size = new System.Drawing.Size(100, 90);
