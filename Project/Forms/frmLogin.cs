@@ -48,14 +48,6 @@ namespace TCC.Forms
             TbEmail.BorderColor = Color.FromArgb(213, 218, 223);
         }
 
-        private void Logout(object sender, FormClosedEventArgs e)
-        {
-            TbLogin.Clear();
-            TbPassword.Clear();
-            Show();
-            TbLogin.Focus();
-        }
-
         private void TbPass_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -67,9 +59,6 @@ namespace TCC.Forms
                     Hide();
                     FrmSplash splash = new FrmSplash();
                     splash.ShowDialog();
-                    FrmMain main = new FrmMain();
-                    main.ShowDialog();
-                    main.FormClosed += Logout;
                 }
                 else
                 {
@@ -93,12 +82,9 @@ namespace TCC.Forms
             acs.Acessar(TbLogin.Text, TbPassword.Text);
             if (acs.exist)
             {
-                Close();
+                Hide();
                 FrmSplash splash = new FrmSplash();
                 splash.ShowDialog();
-                FrmMain main = new FrmMain();
-                main.ShowDialog();
-                main.FormClosed += Logout;
             }
             else
             {

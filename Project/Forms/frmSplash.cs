@@ -14,6 +14,7 @@ namespace APP.Forms
     public partial class FrmSplash : Form
     {
         #region Methods
+
         public FrmSplash()
         {
             InitializeComponent();
@@ -49,8 +50,11 @@ namespace APP.Forms
             {
                 TimerSaida.Stop();
                 Close();
+                FrmMain main = new FrmMain();
+                main.Show();
             }
         }
-        #endregion
+
+        #endregion Methods
     }
 }
