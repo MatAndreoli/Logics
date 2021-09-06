@@ -143,6 +143,16 @@ namespace TCC.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap math {
+            get {
+                object obj = ResourceManager.GetObject("math", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maximize_size_option {
             get {
                 object obj = ResourceManager.GetObject("maximize-size-option", resourceCulture);
@@ -163,6 +173,16 @@ namespace TCC.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pi {
+            get {
+                object obj = ResourceManager.GetObject("pi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap resize {
             get {
                 object obj = ResourceManager.GetObject("resize", resourceCulture);
@@ -176,6 +196,16 @@ namespace TCC.Properties {
         internal static System.Drawing.Bitmap restore {
             get {
                 object obj = ResourceManager.GetObject("restore", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sigma {
+            get {
+                object obj = ResourceManager.GetObject("sigma", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
