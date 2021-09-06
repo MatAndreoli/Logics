@@ -33,6 +33,9 @@ namespace TCC.Forms
                 {
                     timer1.Stop();
                     TbResposta.Enabled = false;
+                    BtnChecar.Enabled = false;
+                    LblN1.Text = "000";
+                    LblN2.Text = "000";
                     UpdateAdicao ad = new UpdateAdicao();
                     ad.AdicaoUpdate(certas, errado);
                 }
