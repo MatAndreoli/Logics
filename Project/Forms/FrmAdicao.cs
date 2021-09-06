@@ -35,6 +35,8 @@ namespace TCC.Forms
                     TbResposta.Enabled = false;
                     UpdateAdicao ad = new UpdateAdicao();
                     ad.AdicaoUpdate(certas, errado);
+                    FrmParabens frmPara = new FrmParabens();
+                    frmPara.Show();
                 }
             }
             else
