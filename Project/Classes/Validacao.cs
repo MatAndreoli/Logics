@@ -12,9 +12,9 @@ namespace APP.Classes
         public bool exist = false;
         private OleDbCommand cmd = new OleDbCommand();
         private Connection con = new Connection();
-        private readonly Regex rgNome = new Regex(@"^[A-ZàáâãèéêìíîòóôõùúûçÀÁÂÃÈÉÌÍÒÓÔÙÚÇ][a-zàáâãèéêìíîòóôõùúûçÀÁÂÃÈÉÌÍÒÓÔÙÚÇ]+$");
-        private readonly Regex rgSobrenome = new Regex(@"^[A-ZàáâãèéêìíîòóôõùúûçÀÁÂÃÈÉÌÍÒÓÔÙÚÇ][a-zàáâãèéêìíîòóôõùúûçÀÁÂÃÈÉÌÍÒÓÔÙÚÇ]*(\s?[A-Za-zA-ZàáâãèéêìíîòóôõùúûçÀÁÂÃÈÉÌÍÒÓÔÙÚÇ]\.?)*");
+        private readonly Regex rgNome = new Regex(@"^[A-ZàáâãèéêìíîòóôõùúûçÀÁÂÃÈÉÌÍÒÓÔÙÚÇa-zàáâãèéêìíîòóôõùúûçÀÁÂÃÈÉÌÍÒÓÔÙÚÇ]*(\s?[A-Za-zA-ZàáâãèéêìíîòóôõùúûçÀÁÂÃÈÉÌÍÒÓÔÙÚÇ]\.?)*");
         private readonly Regex rgIdade = new Regex(@"(^[0-9]{1,2})+$");
+        private readonly Regex rgNumero = new Regex(@"^\-?[0-9]+$");
         private readonly Regex rgEmail = new Regex(@"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
 
         #endregion Variables and Instances
@@ -37,9 +37,8 @@ namespace APP.Classes
                     {
                         UserDados.Login = read.GetString(0);
                         UserDados.Nome = read.GetString(2);
-                        UserDados.Sobrenome = read.GetString(3);
-                        UserDados.Idade = read.GetInt32(4);
-                        UserDados.Email = read.GetString(5);
+                        UserDados.Idade = read.GetInt32(3);
+                        UserDados.Email = read.GetString(4);
                     }
                     exist = true;
                 }
@@ -87,9 +86,9 @@ namespace APP.Classes
             }
         }
 
-        public bool ValidarSobrenome(string sobre)
+        public bool ValidarNumero(string num)
         {
-            if (rgSobrenome.IsMatch(sobre))
+            if (rgNumero.IsMatch(num))
             {
                 return true;
             }

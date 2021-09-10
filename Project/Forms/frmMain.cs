@@ -48,6 +48,10 @@ namespace APP
                 ThemeColor cl = new ThemeColor();
                 Color color = cl.SelectColor();
                 currentBtn = (IconButton)senderBtn;
+                if (currentBtn.Text == "Multiplicação")
+                {
+                    currentBtn.IconChar = IconChar.Percentage;
+                }
                 currentBtn.BackColor = Color.FromArgb(31, 30, 80);
                 currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
@@ -73,6 +77,10 @@ namespace APP
         {
             if (currentBtn != null)
             {
+                if (currentBtn.Text == "Multiplicação")
+                {
+                    currentBtn.IconChar = IconChar.Times;
+                }
                 currentBtn.BackColor = Color.FromArgb(31, 30, 68);
                 currentBtn.ForeColor = Color.Gainsboro;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
@@ -175,6 +183,16 @@ namespace APP
         private void IBtnAdicao_Click(object sender, EventArgs e)
         {
             OpenChild(new FrmAdicao(), sender);
+        }
+
+        private void IbtnSubtracao_Click(object sender, EventArgs e)
+        {
+            OpenChild(new FrmSubtracao(), sender);
+        }
+
+        private void IbtnMultiplicacao_Click(object sender, EventArgs e)
+        {
+            OpenChild(new FrmMultiplicacao(), sender);
         }
 
         #endregion Methods

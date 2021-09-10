@@ -30,7 +30,7 @@ namespace TCC.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.PnlLogo = new Guna.UI2.WinForms.Guna2Panel();
             this.PbLogo = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -45,7 +45,6 @@ namespace TCC.Forms
             this.BtnVoltar = new Guna.UI2.WinForms.Guna2Button();
             this.TbEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.TbIdade = new Guna.UI2.WinForms.Guna2TextBox();
-            this.TbSobre = new Guna.UI2.WinForms.Guna2TextBox();
             this.TbNome = new Guna.UI2.WinForms.Guna2TextBox();
             this.TbConfPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.TbPass = new Guna.UI2.WinForms.Guna2TextBox();
@@ -246,22 +245,22 @@ namespace TCC.Forms
             // 
             this.Anima.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
             this.Anima.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.Anima.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.Anima.DefaultAnimation = animation1;
             // 
             // PnlCad
             // 
@@ -269,7 +268,6 @@ namespace TCC.Forms
             this.PnlCad.Controls.Add(this.BtnVoltar);
             this.PnlCad.Controls.Add(this.TbEmail);
             this.PnlCad.Controls.Add(this.TbIdade);
-            this.PnlCad.Controls.Add(this.TbSobre);
             this.PnlCad.Controls.Add(this.TbNome);
             this.PnlCad.Controls.Add(this.TbConfPass);
             this.PnlCad.Controls.Add(this.TbPass);
@@ -331,7 +329,7 @@ namespace TCC.Forms
             this.TbEmail.ForeColor = System.Drawing.Color.Gainsboro;
             this.TbEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TbEmail.HoverState.Parent = this.TbEmail;
-            this.TbEmail.Location = new System.Drawing.Point(28, 264);
+            this.TbEmail.Location = new System.Drawing.Point(33, 234);
             this.TbEmail.Name = "TbEmail";
             this.TbEmail.PasswordChar = '\0';
             this.TbEmail.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -362,7 +360,7 @@ namespace TCC.Forms
             this.TbIdade.ForeColor = System.Drawing.Color.Gainsboro;
             this.TbIdade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TbIdade.HoverState.Parent = this.TbIdade;
-            this.TbIdade.Location = new System.Drawing.Point(28, 222);
+            this.TbIdade.Location = new System.Drawing.Point(33, 192);
             this.TbIdade.Name = "TbIdade";
             this.TbIdade.PasswordChar = '\0';
             this.TbIdade.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -373,37 +371,6 @@ namespace TCC.Forms
             this.TbIdade.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.TbIdade.TabIndex = 10;
             this.TbIdade.TextChanged += new System.EventHandler(this.TbIdade_TextChanged);
-            // 
-            // TbSobre
-            // 
-            this.TbSobre.BorderRadius = 14;
-            this.TbSobre.BorderThickness = 3;
-            this.TbSobre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Anima.SetDecoration(this.TbSobre, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.TbSobre.DefaultText = "";
-            this.TbSobre.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TbSobre.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TbSobre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TbSobre.DisabledState.Parent = this.TbSobre;
-            this.TbSobre.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TbSobre.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
-            this.TbSobre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TbSobre.FocusedState.Parent = this.TbSobre;
-            this.TbSobre.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TbSobre.ForeColor = System.Drawing.Color.Gainsboro;
-            this.TbSobre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TbSobre.HoverState.Parent = this.TbSobre;
-            this.TbSobre.Location = new System.Drawing.Point(28, 180);
-            this.TbSobre.Name = "TbSobre";
-            this.TbSobre.PasswordChar = '\0';
-            this.TbSobre.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.TbSobre.PlaceholderText = "Sobrenome";
-            this.TbSobre.SelectedText = "";
-            this.TbSobre.ShadowDecoration.Parent = this.TbSobre;
-            this.TbSobre.Size = new System.Drawing.Size(200, 36);
-            this.TbSobre.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.TbSobre.TabIndex = 9;
-            this.TbSobre.TextChanged += new System.EventHandler(this.TbSobre_TextChanged);
             // 
             // TbNome
             // 
@@ -424,7 +391,7 @@ namespace TCC.Forms
             this.TbNome.ForeColor = System.Drawing.Color.Gainsboro;
             this.TbNome.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TbNome.HoverState.Parent = this.TbNome;
-            this.TbNome.Location = new System.Drawing.Point(28, 138);
+            this.TbNome.Location = new System.Drawing.Point(33, 150);
             this.TbNome.Name = "TbNome";
             this.TbNome.PasswordChar = '\0';
             this.TbNome.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -456,7 +423,7 @@ namespace TCC.Forms
             this.TbConfPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TbConfPass.HoverState.Parent = this.TbConfPass;
             this.TbConfPass.IconRightSize = new System.Drawing.Size(16, 16);
-            this.TbConfPass.Location = new System.Drawing.Point(28, 96);
+            this.TbConfPass.Location = new System.Drawing.Point(33, 108);
             this.TbConfPass.Name = "TbConfPass";
             this.TbConfPass.PasswordChar = '\0';
             this.TbConfPass.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -488,7 +455,7 @@ namespace TCC.Forms
             this.TbPass.ForeColor = System.Drawing.Color.Gainsboro;
             this.TbPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TbPass.HoverState.Parent = this.TbPass;
-            this.TbPass.Location = new System.Drawing.Point(28, 54);
+            this.TbPass.Location = new System.Drawing.Point(33, 66);
             this.TbPass.Name = "TbPass";
             this.TbPass.PasswordChar = '\0';
             this.TbPass.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -520,7 +487,7 @@ namespace TCC.Forms
             this.TbUser.ForeColor = System.Drawing.Color.Gainsboro;
             this.TbUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TbUser.HoverState.Parent = this.TbUser;
-            this.TbUser.Location = new System.Drawing.Point(28, 12);
+            this.TbUser.Location = new System.Drawing.Point(33, 24);
             this.TbUser.Name = "TbUser";
             this.TbUser.PasswordChar = '\0';
             this.TbUser.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -632,7 +599,6 @@ namespace TCC.Forms
         private Guna.UI2.WinForms.Guna2TextBox TbUser;
         private Guna.UI2.WinForms.Guna2TextBox TbEmail;
         private Guna.UI2.WinForms.Guna2TextBox TbIdade;
-        private Guna.UI2.WinForms.Guna2TextBox TbSobre;
         private Guna.UI2.WinForms.Guna2TextBox TbNome;
         private Guna.UI2.WinForms.Guna2TextBox TbConfPass;
         private Guna.UI2.WinForms.Guna2TextBox TbPass;

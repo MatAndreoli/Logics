@@ -30,7 +30,7 @@ namespace TCC.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdicao));
             this.TbResposta = new Guna.UI2.WinForms.Guna2TextBox();
             this.LblN1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -280,7 +280,7 @@ namespace TCC.Forms
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Gainsboro;
             this.guna2HtmlLabel3.IsSelectionEnabled = false;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(462, 160);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(437, 160);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(99, 23);
             this.guna2HtmlLabel3.TabIndex = 23;
@@ -293,7 +293,7 @@ namespace TCC.Forms
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Gainsboro;
             this.guna2HtmlLabel2.IsSelectionEnabled = false;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(265, 160);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(249, 160);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(81, 23);
             this.guna2HtmlLabel2.TabIndex = 22;
@@ -306,7 +306,7 @@ namespace TCC.Forms
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Gainsboro;
             this.guna2HtmlLabel1.IsSelectionEnabled = false;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(60, 160);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(44, 160);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(63, 23);
             this.guna2HtmlLabel1.TabIndex = 21;
@@ -331,7 +331,7 @@ namespace TCC.Forms
             this.BtnHard.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnHard.ForeColor = System.Drawing.Color.White;
             this.BtnHard.HoverState.Parent = this.BtnHard;
-            this.BtnHard.Location = new System.Drawing.Point(445, 189);
+            this.BtnHard.Location = new System.Drawing.Point(426, 189);
             this.BtnHard.Name = "BtnHard";
             this.BtnHard.ShadowDecoration.Parent = this.BtnHard;
             this.BtnHard.Size = new System.Drawing.Size(132, 36);
@@ -360,7 +360,7 @@ namespace TCC.Forms
             this.BtnMedium.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnMedium.ForeColor = System.Drawing.Color.White;
             this.BtnMedium.HoverState.Parent = this.BtnMedium;
-            this.BtnMedium.Location = new System.Drawing.Point(239, 189);
+            this.BtnMedium.Location = new System.Drawing.Point(222, 189);
             this.BtnMedium.Name = "BtnMedium";
             this.BtnMedium.ShadowDecoration.Parent = this.BtnMedium;
             this.BtnMedium.Size = new System.Drawing.Size(132, 36);
@@ -389,7 +389,7 @@ namespace TCC.Forms
             this.BtnEasy.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEasy.ForeColor = System.Drawing.Color.White;
             this.BtnEasy.HoverState.Parent = this.BtnEasy;
-            this.BtnEasy.Location = new System.Drawing.Point(25, 189);
+            this.BtnEasy.Location = new System.Drawing.Point(18, 189);
             this.BtnEasy.Name = "BtnEasy";
             this.BtnEasy.ShadowDecoration.Parent = this.BtnEasy;
             this.BtnEasy.Size = new System.Drawing.Size(132, 36);
@@ -403,22 +403,22 @@ namespace TCC.Forms
             // 
             this.Transition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
             this.Transition.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.Transition.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.Transition.DefaultAnimation = animation2;
             // 
             // FrmAdicao
             // 

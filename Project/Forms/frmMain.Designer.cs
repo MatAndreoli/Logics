@@ -36,8 +36,8 @@ namespace APP
             this.IbtnConfig = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.IbtnMultiplicacao = new FontAwesome.Sharp.IconButton();
+            this.IbtnSubtracao = new FontAwesome.Sharp.IconButton();
             this.IBtnAdicao = new FontAwesome.Sharp.IconButton();
             this.PnLogo = new Guna.UI2.WinForms.Guna2Panel();
             this.Guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -73,8 +73,8 @@ namespace APP
             this.PnMenu.Controls.Add(this.IbtnConfig);
             this.PnMenu.Controls.Add(this.iconButton5);
             this.PnMenu.Controls.Add(this.iconButton4);
-            this.PnMenu.Controls.Add(this.iconButton3);
-            this.PnMenu.Controls.Add(this.iconButton2);
+            this.PnMenu.Controls.Add(this.IbtnMultiplicacao);
+            this.PnMenu.Controls.Add(this.IbtnSubtracao);
             this.PnMenu.Controls.Add(this.IBtnAdicao);
             this.PnMenu.Controls.Add(this.PnLogo);
             this.PnMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -178,51 +178,53 @@ namespace APP
             this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton4.UseVisualStyleBackColor = true;
             // 
-            // iconButton3
+            // IbtnMultiplicacao
             // 
-            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton3.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 32;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 217);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton3.Size = new System.Drawing.Size(209, 60);
-            this.iconButton3.TabIndex = 10;
-            this.iconButton3.Text = "iconButton3";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = true;
+            this.IbtnMultiplicacao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IbtnMultiplicacao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.IbtnMultiplicacao.FlatAppearance.BorderSize = 0;
+            this.IbtnMultiplicacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IbtnMultiplicacao.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IbtnMultiplicacao.ForeColor = System.Drawing.Color.Gainsboro;
+            this.IbtnMultiplicacao.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.IbtnMultiplicacao.IconColor = System.Drawing.Color.Gainsboro;
+            this.IbtnMultiplicacao.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IbtnMultiplicacao.IconSize = 32;
+            this.IbtnMultiplicacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.IbtnMultiplicacao.Location = new System.Drawing.Point(0, 217);
+            this.IbtnMultiplicacao.Name = "IbtnMultiplicacao";
+            this.IbtnMultiplicacao.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.IbtnMultiplicacao.Size = new System.Drawing.Size(209, 60);
+            this.IbtnMultiplicacao.TabIndex = 10;
+            this.IbtnMultiplicacao.Text = "Multiplicação";
+            this.IbtnMultiplicacao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.IbtnMultiplicacao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IbtnMultiplicacao.UseVisualStyleBackColor = true;
+            this.IbtnMultiplicacao.Click += new System.EventHandler(this.IbtnMultiplicacao_Click);
             // 
-            // iconButton2
+            // IbtnSubtracao
             // 
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 32;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 157);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton2.Size = new System.Drawing.Size(209, 60);
-            this.iconButton2.TabIndex = 9;
-            this.iconButton2.Text = "iconButton2";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = true;
+            this.IbtnSubtracao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IbtnSubtracao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.IbtnSubtracao.FlatAppearance.BorderSize = 0;
+            this.IbtnSubtracao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IbtnSubtracao.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IbtnSubtracao.ForeColor = System.Drawing.Color.Gainsboro;
+            this.IbtnSubtracao.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.IbtnSubtracao.IconColor = System.Drawing.Color.Gainsboro;
+            this.IbtnSubtracao.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IbtnSubtracao.IconSize = 32;
+            this.IbtnSubtracao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.IbtnSubtracao.Location = new System.Drawing.Point(0, 157);
+            this.IbtnSubtracao.Name = "IbtnSubtracao";
+            this.IbtnSubtracao.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.IbtnSubtracao.Size = new System.Drawing.Size(209, 60);
+            this.IbtnSubtracao.TabIndex = 9;
+            this.IbtnSubtracao.Text = "Subtração";
+            this.IbtnSubtracao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.IbtnSubtracao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IbtnSubtracao.UseVisualStyleBackColor = true;
+            this.IbtnSubtracao.Click += new System.EventHandler(this.IbtnSubtracao_Click);
             // 
             // IBtnAdicao
             // 
@@ -486,8 +488,8 @@ namespace APP
         private FontAwesome.Sharp.IconButton IbtnConfig;
         private FontAwesome.Sharp.IconButton iconButton5;
         private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton IbtnMultiplicacao;
+        private FontAwesome.Sharp.IconButton IbtnSubtracao;
         private Guna.UI2.WinForms.Guna2Panel PnPai;
         private FontAwesome.Sharp.IconPictureBox IpbPage;
         private Guna.UI2.WinForms.Guna2PictureBox PbMarca;

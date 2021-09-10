@@ -1,18 +1,29 @@
 ﻿using APP.Classes;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using TCC.Classes;
 
 namespace TCC.Forms
 {
-    public partial class FrmAdicao : Form
+    public partial class FrmSubtracao : Form
     {
         private Random rand = new Random();
         private int num1, num2, timeLeft, certas, errado;
         private ThemeColor cl = new ThemeColor();
         private string BtnNivel = string.Empty;
         private Validacao val = new Validacao();
+
+        public FrmSubtracao()
+        {
+            InitializeComponent();
+        }
 
         public void CheckAnswer()
         {
@@ -26,7 +37,7 @@ namespace TCC.Forms
                 MessageBox.Show("Valor inválido.");
                 TbResposta.Clear();
             }
-            else if (num1 + num2 == Convert.ToInt32(TbResposta.Text))
+            else if (num1 - num2 == Convert.ToInt32(TbResposta.Text))
             {
                 TbResposta.BorderColor = Color.FromArgb(213, 218, 223);
                 TbResposta.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
@@ -40,8 +51,8 @@ namespace TCC.Forms
                     timer1.Stop();
                     TbResposta.Enabled = false;
                     BtnChecar.Enabled = false;
-                    UpdateAdicao ad = new UpdateAdicao();
-                    ad.AdicaoUpdate(certas, errado);
+                    UpdateSubtracao sub = new UpdateSubtracao();
+                    sub.SubtracaoUpdate(certas, errado);
                     FrmParabens frmPara = new FrmParabens();
                     frmPara.Show();
                 }
@@ -104,36 +115,6 @@ namespace TCC.Forms
             LblN2.Text = "000";
         }
 
-        public FrmAdicao()
-        {
-            InitializeComponent();
-        }
-
-        private void BtnChecar_Click(object sender, EventArgs e)
-        {
-            CheckAnswer();
-        }
-
-        private void BtnChecar_MouseEnter(object sender, EventArgs e)
-        {
-            Color color = cl.SelectColor();
-            ThemeColor.PrimaryColor = color;
-            BtnChecar.FillColor = color;
-            BtnChecar.BorderColor = color;
-        }
-
-        private void BtnChecar_MouseLeave(object sender, EventArgs e)
-        {
-            BtnChecar.FillColor = Color.FromArgb(36, 35, 80);
-        }
-
-        private void BtnEasy_Click(object sender, EventArgs e)
-        {
-            Transition.HideSync(PnlOptions);
-            Transition.ShowSync(PnlGame);
-            BtnNivel = BtnEasy.Text;
-        }
-
         private void BtnMedium_Click(object sender, EventArgs e)
         {
             Transition.HideSync(PnlOptions);
@@ -141,19 +122,9 @@ namespace TCC.Forms
             BtnNivel = BtnMedium.Text;
         }
 
-        private void BtnHard_Click(object sender, EventArgs e)
+        private void BtnMedium_MouseLeave(object sender, EventArgs e)
         {
-            Transition.HideSync(PnlOptions);
-            Transition.ShowSync(PnlGame);
-            BtnNivel = BtnHard.Text;
-        }
-
-        private void BtnEasy_MouseEnter(object sender, EventArgs e)
-        {
-            Color color = cl.SelectColor();
-            ThemeColor.PrimaryColor = color;
-            BtnEasy.FillColor = color;
-            BtnEasy.BorderColor = color;
+            BtnMedium.FillColor = Color.FromArgb(36, 35, 80);
         }
 
         private void BtnMedium_MouseEnter(object sender, EventArgs e)
@@ -164,61 +135,16 @@ namespace TCC.Forms
             BtnMedium.BorderColor = color;
         }
 
-        private void BtnHard_MouseEnter(object sender, EventArgs e)
+        private void BtnHard_Click(object sender, EventArgs e)
         {
-            Color color = cl.SelectColor();
-            ThemeColor.PrimaryColor = color;
-            BtnHard.FillColor = color;
-            BtnHard.BorderColor = color;
-        }
-
-        private void BtnEasy_MouseLeave(object sender, EventArgs e)
-        {
-            BtnEasy.FillColor = Color.FromArgb(36, 35, 80);
-        }
-
-        private void BtnMedium_MouseLeave(object sender, EventArgs e)
-        {
-            BtnMedium.FillColor = Color.FromArgb(36, 35, 80);
+            Transition.HideSync(PnlOptions);
+            Transition.ShowSync(PnlGame);
+            BtnNivel = BtnHard.Text;
         }
 
         private void BtnHard_MouseLeave(object sender, EventArgs e)
         {
             BtnHard.FillColor = Color.FromArgb(36, 35, 80);
-        }
-
-        private void BtnStart_MouseLeave(object sender, EventArgs e)
-        {
-            BtnStart.FillColor = Color.FromArgb(36, 35, 80);
-        }
-
-        private void BtnStart_Click(object sender, EventArgs e)
-        {
-            timeLeft = 70;
-            StartNumbers();
-            timer1.Start();
-            BtnChecar.Enabled = true;
-            TbResposta.Enabled = true;
-            TbResposta.ReadOnly = false;
-            TbResposta.Clear();
-            certas = 0;
-            errado = 0;
-            PrgPontos.Value = 0;
-        }
-
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-            Transition.HideSync(PnlGame);
-            Transition.ShowSync(PnlOptions);
-            Reinicia();
-        }
-
-        private void BtnStart_MouseEnter(object sender, EventArgs e)
-        {
-            Color color = cl.SelectColor();
-            ThemeColor.PrimaryColor = color;
-            BtnStart.FillColor = color;
-            BtnStart.BorderColor = color;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -246,13 +172,93 @@ namespace TCC.Forms
             }
         }
 
-        private void FrmAdicao_Load(object sender, EventArgs e)
+        private void FrmSubtracao_Load(object sender, EventArgs e)
         {
             TbResposta.ReadOnly = true;
             BtnChecar.Enabled = false;
             PrgPontos.Value = 0;
             PnlOptions.BorderColor = ThemeColor.PrimaryColor;
             PnlGame.BorderColor = ThemeColor.PrimaryColor;
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            Transition.HideSync(PnlGame);
+            Transition.ShowSync(PnlOptions);
+            Reinicia();
+        }
+
+        private void BtnStart_Click(object sender, EventArgs e)
+        {
+            timeLeft = 70;
+            StartNumbers();
+            timer1.Start();
+            BtnChecar.Enabled = true;
+            TbResposta.Enabled = true;
+            TbResposta.ReadOnly = false;
+            TbResposta.Clear();
+            certas = 0;
+            errado = 0;
+            PrgPontos.Value = 0;
+        }
+
+        private void BtnStart_MouseLeave(object sender, EventArgs e)
+        {
+            BtnStart.FillColor = Color.FromArgb(36, 35, 80);
+        }
+
+        private void BtnStart_MouseEnter(object sender, EventArgs e)
+        {
+            Color color = cl.SelectColor();
+            ThemeColor.PrimaryColor = color;
+            BtnStart.FillColor = color;
+            BtnStart.BorderColor = color;
+        }
+
+        private void BtnChecar_Click(object sender, EventArgs e)
+        {
+            CheckAnswer();
+        }
+
+        private void BtnChecar_MouseLeave(object sender, EventArgs e)
+        {
+            BtnChecar.FillColor = Color.FromArgb(36, 35, 80);
+        }
+
+        private void BtnChecar_MouseEnter(object sender, EventArgs e)
+        {
+            Color color = cl.SelectColor();
+            ThemeColor.PrimaryColor = color;
+            BtnChecar.FillColor = color;
+            BtnChecar.BorderColor = color;
+        }
+
+        private void BtnHard_MouseEnter(object sender, EventArgs e)
+        {
+            Color color = cl.SelectColor();
+            ThemeColor.PrimaryColor = color;
+            BtnHard.FillColor = color;
+            BtnHard.BorderColor = color;
+        }
+
+        private void BtnEasy_Click(object sender, EventArgs e)
+        {
+            Transition.HideSync(PnlOptions);
+            Transition.ShowSync(PnlGame);
+            BtnNivel = BtnEasy.Text;
+        }
+
+        private void BtnEasy_MouseEnter(object sender, EventArgs e)
+        {
+            Color color = cl.SelectColor();
+            ThemeColor.PrimaryColor = color;
+            BtnEasy.FillColor = color;
+            BtnEasy.BorderColor = color;
+        }
+
+        private void BtnEasy_MouseLeave(object sender, EventArgs e)
+        {
+            BtnEasy.FillColor = Color.FromArgb(36, 35, 80);
         }
     }
 }

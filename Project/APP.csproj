@@ -97,8 +97,12 @@
     <Compile Include="Acesso\Connection.cs" />
     <Compile Include="Classes\Cadastro.cs" />
     <Compile Include="Classes\Adicao.cs" />
+    <Compile Include="Classes\Multiplicacao.cs" />
+    <Compile Include="Classes\Subtracao.cs" />
     <Compile Include="Classes\ThemeColor.cs" />
     <Compile Include="Classes\UpdateAdicao.cs" />
+    <Compile Include="Classes\UpdateMultiplicacao.cs" />
+    <Compile Include="Classes\UpdateSubtracao.cs" />
     <Compile Include="Classes\UserDados.cs" />
     <Compile Include="Classes\Validacao.cs" />
     <Compile Include="Forms\FrmAdicao.cs">
@@ -125,6 +129,12 @@
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmMultiplicacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMultiplicacao.Designer.cs">
+      <DependentUpon>FrmMultiplicacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmParabens.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +146,12 @@
     </Compile>
     <Compile Include="Forms\FrmSplash.Designer.cs">
       <DependentUpon>FrmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSubtracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSubtracao.Designer.cs">
+      <DependentUpon>FrmSubtracao.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -161,11 +177,17 @@
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMultiplicacao.resx">
+      <DependentUpon>FrmMultiplicacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmParabens.resx">
       <DependentUpon>FrmParabens.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmSplash.resx">
       <DependentUpon>FrmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSubtracao.resx">
+      <DependentUpon>FrmSubtracao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
