@@ -33,7 +33,6 @@ namespace TCC.Forms
             TbPass.Clear();
             TbConfPass.Clear();
             TbNome.Clear();
-            TbSobre.Clear();
             TbIdade.Clear();
             TbEmail.Clear();
 
@@ -43,7 +42,6 @@ namespace TCC.Forms
             TbPass.BorderColor = Color.FromArgb(213, 218, 223);
             TbConfPass.BorderColor = Color.FromArgb(213, 218, 223);
             TbNome.BorderColor = Color.FromArgb(213, 218, 223);
-            TbSobre.BorderColor = Color.FromArgb(213, 218, 223);
             TbIdade.BorderColor = Color.FromArgb(213, 218, 223);
             TbEmail.BorderColor = Color.FromArgb(213, 218, 223);
         }
@@ -112,7 +110,6 @@ namespace TCC.Forms
             if (TbUser.Text == "" ||
                 TbPass.Text == "" ||
                 TbNome.Text == "" ||
-                TbSobre.Text == "" ||
                 TbIdade.Text == "" ||
                 TbEmail.Text == "")
             {
@@ -127,12 +124,6 @@ namespace TCC.Forms
                 MessageBox.Show("Nome inválido.");
                 TbNome.Clear();
                 TbNome.Focus();
-            }
-            else if (!val.ValidarSobrenome(TbSobre.Text))
-            {
-                MessageBox.Show("Sobrenome inválido.");
-                TbSobre.Clear();
-                TbSobre.Focus();
             }
             else if (!val.ValidarIdade(TbIdade.Text))
             {
@@ -150,7 +141,7 @@ namespace TCC.Forms
             {
                 try
                 {
-                    Cadastro cad = new Cadastro(TbUser.Text, TbPass.Text, TbNome.Text, TbSobre.Text, Convert.ToInt32(TbIdade.Text), TbEmail.Text);
+                    Cadastro cad = new Cadastro(TbUser.Text, TbPass.Text, TbNome.Text, Convert.ToInt32(TbIdade.Text), TbEmail.Text);
                     if (cad.Cadastrou())
                     {
                         Anima.HideSync(PnlCad);
@@ -274,13 +265,6 @@ namespace TCC.Forms
             Color color = cl.SelectColor();
             ThemeColor.PrimaryColor = color;
             TbNome.BorderColor = color;
-        }
-
-        private void TbSobre_TextChanged(object sender, EventArgs e)
-        {
-            Color color = cl.SelectColor();
-            ThemeColor.PrimaryColor = color;
-            TbSobre.BorderColor = color;
         }
 
         private void TbIdade_TextChanged(object sender, EventArgs e)

@@ -11,7 +11,8 @@ namespace TCC.Forms
         private Random rand = new Random();
         private int num1, num2, timeLeft, certas, errado;
         private ThemeColor cl = new ThemeColor();
-        private String BtnNivel = string.Empty;
+        private string BtnNivel = string.Empty;
+        private Validacao val = new Validacao();
 
         public void CheckAnswer()
         {
@@ -19,6 +20,11 @@ namespace TCC.Forms
             {
                 MessageBox.Show("Digite um número.");
                 TbResposta.Focus();
+            }
+            else if (!val.ValidarNumero(TbResposta.Text))
+            {
+                MessageBox.Show("Valor inválido.");
+                TbResposta.Clear();
             }
             else if (num1 + num2 == Convert.ToInt32(TbResposta.Text))
             {
@@ -33,6 +39,7 @@ namespace TCC.Forms
                 {
                     timer1.Stop();
                     TbResposta.Enabled = false;
+                    BtnChecar.Enabled = false;
                     UpdateAdicao ad = new UpdateAdicao();
                     ad.AdicaoUpdate(certas, errado);
                     FrmParabens frmPara = new FrmParabens();
@@ -72,8 +79,8 @@ namespace TCC.Forms
                     break;
 
                 case "Difícil":
-                    num1 = rand.Next(100, 1000);
-                    num2 = rand.Next(100, 1000);
+                    num1 = rand.Next(100, 999);
+                    num2 = rand.Next(100, 999);
                     break;
             }
 

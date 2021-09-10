@@ -3,7 +3,7 @@ using System.Data.OleDb;
 
 namespace TCC.Classes
 {
-    internal class Subtracao
+    internal class Multiplicacao
     {
         #region Variables and Instances
 
@@ -14,9 +14,9 @@ namespace TCC.Classes
 
         #region Methods
 
-        public Subtracao(string login)
+        public Multiplicacao(string login)
         {
-            cmd.CommandText = "insert into Subtracao(loginS, acertos, erros) values('" + login + "', 0, 0)";
+            cmd.CommandText = "insert into Multiplicacao (loginM, acertos, erros) values('" + login + "', 0, 0)";
 
             try
             {

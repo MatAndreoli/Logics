@@ -5,26 +5,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using APP.Acesso;
+using TCC.Classes;
 using System.Data.OleDb;
 
 namespace APP.Classes
 {
-    class Cadastro
+    internal class Cadastro
     {
         #region Variables and Instances
-        Connection conn = new Connection();
-        OleDbCommand cmd = new OleDbCommand();
-        bool cadastrado = false;
-        #endregion
+
+        private Connection conn = new Connection();
+        private OleDbCommand cmd = new OleDbCommand();
+        private bool cadastrado;
+
+        #endregion Variables and Instances
 
         #region Methods
-        public Cadastro(string user, string pass, string nome, string sobre, int idade, string email)
+
+        public Cadastro(string user, string pass, string nome, int idade, string email)
         {
-            cmd.CommandText = "insert into Login values('"+ user + "', '" + pass + "', '" + nome + "', '" + sobre + "', " + idade + ", '" + email + "')";
+            cmd.CommandText = "insert into Login values('" + user + "', '" + pass + "', '" + nome + "', " + idade + ", '" + email + "')";
 
             try
             {
                 Adicao point = new Adicao(user);
+                Subtracao sub = new Subtracao(user);
                 cmd.Connection = conn.Connect();
                 cmd.ExecuteNonQuery();
                 conn.Disconnect();
@@ -48,6 +53,7 @@ namespace APP.Classes
                 return false;
             }
         }
-        #endregion
+
+        #endregion Methods
     }
 }

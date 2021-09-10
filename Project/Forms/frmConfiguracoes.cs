@@ -17,7 +17,7 @@ namespace APP.Forms
         {
             LblUser.Text = UserDados.Login;
             LblEmail.Text = UserDados.Email;
-            LblNome.Text = UserDados.Nome + " " + UserDados.Sobrenome;
+            LblNome.Text = UserDados.Nome;
             LblIdade.Text = Convert.ToString(UserDados.Idade) + " anos";
         }
 

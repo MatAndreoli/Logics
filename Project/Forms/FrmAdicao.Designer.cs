@@ -30,7 +30,7 @@ namespace TCC.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdicao));
             this.TbResposta = new Guna.UI2.WinForms.Guna2TextBox();
             this.LblN1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -38,22 +38,22 @@ namespace TCC.Forms
             this.LblTime = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.PrgPontos = new Guna.UI2.WinForms.Guna2VProgressBar();
             this.PnlGame = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblPlus = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.LblN2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.BtnStart = new Guna.UI2.WinForms.Guna2Button();
             this.BtnChecar = new Guna.UI2.WinForms.Guna2Button();
             this.PnlOptions = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.BtnHard = new Guna.UI2.WinForms.Guna2Button();
             this.BtnMedium = new Guna.UI2.WinForms.Guna2Button();
             this.BtnEasy = new Guna.UI2.WinForms.Guna2Button();
             this.Transition = new Guna.UI2.WinForms.Guna2Transition();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.LblN2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.LblPlus = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.PnlGame.SuspendLayout();
-            this.PnlOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.PnlOptions.SuspendLayout();
             this.SuspendLayout();
             // 
             // TbResposta
@@ -159,6 +159,45 @@ namespace TCC.Forms
             this.PnlGame.TabIndex = 16;
             this.PnlGame.Visible = false;
             // 
+            // LblPlus
+            // 
+            this.LblPlus.BackColor = System.Drawing.Color.Transparent;
+            this.Transition.SetDecoration(this.LblPlus, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.LblPlus.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPlus.ForeColor = System.Drawing.Color.Gainsboro;
+            this.LblPlus.IsSelectionEnabled = false;
+            this.LblPlus.Location = new System.Drawing.Point(230, 81);
+            this.LblPlus.Name = "LblPlus";
+            this.LblPlus.Size = new System.Drawing.Size(31, 56);
+            this.LblPlus.TabIndex = 23;
+            this.LblPlus.Text = "+";
+            // 
+            // LblN2
+            // 
+            this.LblN2.BackColor = System.Drawing.Color.Transparent;
+            this.Transition.SetDecoration(this.LblN2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.LblN2.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblN2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.LblN2.IsSelectionEnabled = false;
+            this.LblN2.Location = new System.Drawing.Point(267, 114);
+            this.LblN2.Name = "LblN2";
+            this.LblN2.Size = new System.Drawing.Size(72, 56);
+            this.LblN2.TabIndex = 22;
+            this.LblN2.Text = "000";
+            // 
+            // guna2PictureBox1
+            // 
+            this.Transition.SetDecoration(this.guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2PictureBox1.Image = global::TCC.Properties.Resources.Back;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(31, 29);
+            this.guna2PictureBox1.TabIndex = 21;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            // 
             // BtnStart
             // 
             this.BtnStart.BackColor = System.Drawing.Color.Transparent;
@@ -233,6 +272,45 @@ namespace TCC.Forms
             this.PnlOptions.ShadowDecoration.Parent = this.PnlOptions;
             this.PnlOptions.Size = new System.Drawing.Size(611, 432);
             this.PnlOptions.TabIndex = 18;
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.Transition.SetDecoration(this.guna2HtmlLabel3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.guna2HtmlLabel3.IsSelectionEnabled = false;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(437, 160);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(99, 23);
+            this.guna2HtmlLabel3.TabIndex = 23;
+            this.guna2HtmlLabel3.Text = "De 100 à 999";
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.Transition.SetDecoration(this.guna2HtmlLabel2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.guna2HtmlLabel2.IsSelectionEnabled = false;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(249, 160);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(81, 23);
+            this.guna2HtmlLabel2.TabIndex = 22;
+            this.guna2HtmlLabel2.Text = "De 10 à 99";
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.Transition.SetDecoration(this.guna2HtmlLabel1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.guna2HtmlLabel1.IsSelectionEnabled = false;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(44, 160);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(63, 23);
+            this.guna2HtmlLabel1.TabIndex = 21;
+            this.guna2HtmlLabel1.Text = "De 1 à 9";
             // 
             // BtnHard
             // 
@@ -325,100 +403,22 @@ namespace TCC.Forms
             // 
             this.Transition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
             this.Transition.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.Transition.DefaultAnimation = animation2;
-            // 
-            // guna2PictureBox1
-            // 
-            this.Transition.SetDecoration(this.guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2PictureBox1.Image = global::TCC.Properties.Resources.Back;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(31, 29);
-            this.guna2PictureBox1.TabIndex = 21;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
-            // 
-            // LblN2
-            // 
-            this.LblN2.BackColor = System.Drawing.Color.Transparent;
-            this.Transition.SetDecoration(this.LblN2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.LblN2.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblN2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LblN2.IsSelectionEnabled = false;
-            this.LblN2.Location = new System.Drawing.Point(267, 114);
-            this.LblN2.Name = "LblN2";
-            this.LblN2.Size = new System.Drawing.Size(72, 56);
-            this.LblN2.TabIndex = 22;
-            this.LblN2.Text = "000";
-            // 
-            // LblPlus
-            // 
-            this.LblPlus.BackColor = System.Drawing.Color.Transparent;
-            this.Transition.SetDecoration(this.LblPlus, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.LblPlus.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPlus.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LblPlus.IsSelectionEnabled = false;
-            this.LblPlus.Location = new System.Drawing.Point(230, 81);
-            this.LblPlus.Name = "LblPlus";
-            this.LblPlus.Size = new System.Drawing.Size(31, 56);
-            this.LblPlus.TabIndex = 23;
-            this.LblPlus.Text = "+";
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.Transition.SetDecoration(this.guna2HtmlLabel1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.guna2HtmlLabel1.IsSelectionEnabled = false;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(44, 160);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(63, 23);
-            this.guna2HtmlLabel1.TabIndex = 21;
-            this.guna2HtmlLabel1.Text = "De 1 à 9";
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.Transition.SetDecoration(this.guna2HtmlLabel2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.guna2HtmlLabel2.IsSelectionEnabled = false;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(249, 160);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(81, 23);
-            this.guna2HtmlLabel2.TabIndex = 22;
-            this.guna2HtmlLabel2.Text = "De 10 à 99";
-            // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.Transition.SetDecoration(this.guna2HtmlLabel3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.guna2HtmlLabel3.IsSelectionEnabled = false;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(437, 160);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(108, 23);
-            this.guna2HtmlLabel3.TabIndex = 23;
-            this.guna2HtmlLabel3.Text = "De 100 à 1000";
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.Transition.DefaultAnimation = animation1;
             // 
             // FrmAdicao
             // 
@@ -435,9 +435,9 @@ namespace TCC.Forms
             this.Load += new System.EventHandler(this.FrmAdicao_Load);
             this.PnlGame.ResumeLayout(false);
             this.PnlGame.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.PnlOptions.ResumeLayout(false);
             this.PnlOptions.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

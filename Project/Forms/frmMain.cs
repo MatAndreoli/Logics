@@ -177,6 +177,11 @@ namespace APP
             OpenChild(new FrmAdicao(), sender);
         }
 
+        private void IbtnSubtracao_Click(object sender, EventArgs e)
+        {
+            OpenChild(new FrmSubtracao(), sender);
+        }
+
         #endregion Methods
     }
 }
