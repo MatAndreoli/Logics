@@ -10,5 +10,8 @@
         public static int AcertoAdicao { get; set; }
         public static int ErroAdicao { get; set; }
         public static int TotalAdicao { get; set; }
+        public static int AcertoSub { get; set; }
+        public static int ErroSub { get; set; }
+        public static int TotalSub { get; set; }
     }
 }

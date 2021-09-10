@@ -97,6 +97,7 @@
     <Compile Include="Acesso\Connection.cs" />
     <Compile Include="Classes\Cadastro.cs" />
     <Compile Include="Classes\Adicao.cs" />
+    <Compile Include="Classes\Subtracao.cs" />
     <Compile Include="Classes\ThemeColor.cs" />
     <Compile Include="Classes\UpdateAdicao.cs" />
     <Compile Include="Classes\UserDados.cs" />
@@ -136,6 +137,12 @@
     </Compile>
     <Compile Include="Forms\FrmSplash.Designer.cs">
       <DependentUpon>FrmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSubtracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSubtracao.Designer.cs">
+      <DependentUpon>FrmSubtracao.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
