@@ -11,7 +11,7 @@ namespace TCC.Forms
         private Random rand = new Random();
         private int num1, num2, timeLeft, certas, errado;
         private ThemeColor cl = new ThemeColor();
-        private String BtnNivel = string.Empty;
+        private string BtnNivel = string.Empty;
 
         public void CheckAnswer()
         {
@@ -75,8 +75,8 @@ namespace TCC.Forms
                     break;
 
                 case "Difícil":
-                    num1 = rand.Next(100, 1000);
-                    num2 = rand.Next(100, 1000);
+                    num1 = rand.Next(100, 999);
+                    num2 = rand.Next(100, 999);
                     break;
             }
 
