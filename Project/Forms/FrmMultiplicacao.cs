@@ -173,16 +173,19 @@ namespace TCC.Forms
                 case "Multiplicação":
                     num1 = rand.Next(1, 99);
                     num2 = rand.Next(1, 9);
+
+                    LblN1.Text = num1.ToString();
+                    LblN2.Text = num2.ToString();
                     break;
 
                 case "Porcentagem":
                     num1 = NumRedondo();
                     num2 = Num2Redondo();
+
+                    LblN1.Text = num1.ToString() + "% de";
+                    LblN2.Text = num2.ToString();
                     break;
             }
-
-            LblN1.Text = num1.ToString() + "% de";
-            LblN2.Text = num2.ToString();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -303,6 +306,7 @@ namespace TCC.Forms
             BtnNivel = BtnMulti.Text;
             LblMulti.Visible = true;
             LblN1.Text = "000";
+            LblN2.Text = "000";
         }
 
         private void BtnPorc_Click(object sender, EventArgs e)

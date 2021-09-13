@@ -30,9 +30,10 @@ namespace TCC.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation9 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMultiplicacao));
             this.PnlOptions = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.LblMultiExp = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.BtnPorc = new Guna.UI2.WinForms.Guna2Button();
@@ -49,7 +50,6 @@ namespace TCC.Forms
             this.LblTime = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Transition = new Guna.UI2.WinForms.Guna2Transition();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.PnlOptions.SuspendLayout();
             this.PnlGame.SuspendLayout();
@@ -73,6 +73,19 @@ namespace TCC.Forms
             this.PnlOptions.Size = new System.Drawing.Size(611, 432);
             this.PnlOptions.TabIndex = 20;
             // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.Transition.SetDecoration(this.guna2HtmlLabel1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.guna2HtmlLabel1.IsSelectionEnabled = false;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(115, 182);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(122, 23);
+            this.guna2HtmlLabel1.TabIndex = 23;
+            this.guna2HtmlLabel1.Text = "2º fator de 1 à 9";
+            // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
@@ -80,11 +93,11 @@ namespace TCC.Forms
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Gainsboro;
             this.guna2HtmlLabel2.IsSelectionEnabled = false;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(350, 153);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(336, 153);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(194, 23);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(222, 23);
             this.guna2HtmlLabel2.TabIndex = 22;
-            this.guna2HtmlLabel2.Text = "Porcentagem de 10 à 100";
+            this.guna2HtmlLabel2.Text = "Porcentagem de 10% à 100%";
             // 
             // LblMultiExp
             // 
@@ -362,35 +375,22 @@ namespace TCC.Forms
             // 
             this.Transition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
             this.Transition.Cursor = null;
-            animation9.AnimateOnlyDifferences = true;
-            animation9.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.BlindCoeff")));
-            animation9.LeafCoeff = 0F;
-            animation9.MaxTime = 1F;
-            animation9.MinTime = 0F;
-            animation9.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicCoeff")));
-            animation9.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicShift")));
-            animation9.MosaicSize = 0;
-            animation9.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation9.RotateCoeff = 0F;
-            animation9.RotateLimit = 0F;
-            animation9.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.ScaleCoeff")));
-            animation9.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.SlideCoeff")));
-            animation9.TimeCoeff = 0F;
-            animation9.TransparencyCoeff = 0F;
-            this.Transition.DefaultAnimation = animation9;
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.Transition.SetDecoration(this.guna2HtmlLabel1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.guna2HtmlLabel1.IsSelectionEnabled = false;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(115, 182);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(122, 23);
-            this.guna2HtmlLabel1.TabIndex = 23;
-            this.guna2HtmlLabel1.Text = "2º fator de 1 à 9";
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.Transition.DefaultAnimation = animation3;
             // 
             // guna2HtmlLabel3
             // 
@@ -416,7 +416,7 @@ namespace TCC.Forms
             this.Transition.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMultiplicacao";
-            this.Text = "FrmMultiplicacao";
+            this.Text = "Multiplicação";
             this.Load += new System.EventHandler(this.FrmMultiplicacao_Load);
             this.PnlOptions.ResumeLayout(false);
             this.PnlOptions.PerformLayout();
@@ -446,7 +446,7 @@ namespace TCC.Forms
         private Guna.UI2.WinForms.Guna2HtmlLabel LblTime;
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2Transition Transition;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
     }
 }
