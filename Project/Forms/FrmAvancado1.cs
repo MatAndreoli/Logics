@@ -21,6 +21,11 @@ namespace TCC.Forms
         private string BtnNivel = string.Empty;
         private Validacao val = new Validacao();
 
+        public FrmAvancado1()
+        {
+            InitializeComponent();
+        }
+
         public int NumRedondo()
         {
             int n = rand.Next(10, 100);
@@ -55,11 +60,6 @@ namespace TCC.Forms
             LblTime.Text = "0:00";
             LblN1.Text = "000";
             LblN2.Text = "000";
-        }
-
-        public FrmAvancado1()
-        {
-            InitializeComponent();
         }
 
         public void CheckAnswer()

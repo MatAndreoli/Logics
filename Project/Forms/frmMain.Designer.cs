@@ -35,7 +35,7 @@ namespace APP
             this.IbtnLogout = new FontAwesome.Sharp.IconButton();
             this.IbtnConfig = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.IbtnAvancado2 = new FontAwesome.Sharp.IconButton();
             this.IbtnAvancado1 = new FontAwesome.Sharp.IconButton();
             this.IbtnSubtracao = new FontAwesome.Sharp.IconButton();
             this.IBtnAdicao = new FontAwesome.Sharp.IconButton();
@@ -72,7 +72,7 @@ namespace APP
             this.PnMenu.Controls.Add(this.IbtnLogout);
             this.PnMenu.Controls.Add(this.IbtnConfig);
             this.PnMenu.Controls.Add(this.iconButton5);
-            this.PnMenu.Controls.Add(this.iconButton4);
+            this.PnMenu.Controls.Add(this.IbtnAvancado2);
             this.PnMenu.Controls.Add(this.IbtnAvancado1);
             this.PnMenu.Controls.Add(this.IbtnSubtracao);
             this.PnMenu.Controls.Add(this.IBtnAdicao);
@@ -155,28 +155,29 @@ namespace APP
             this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton5.UseVisualStyleBackColor = true;
             // 
-            // iconButton4
+            // IbtnAvancado2
             // 
-            this.iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Divide;
-            this.iconButton4.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 32;
-            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(0, 277);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton4.Size = new System.Drawing.Size(209, 60);
-            this.iconButton4.TabIndex = 11;
-            this.iconButton4.Text = "Avançado2";
-            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = true;
+            this.IbtnAvancado2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IbtnAvancado2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.IbtnAvancado2.FlatAppearance.BorderSize = 0;
+            this.IbtnAvancado2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IbtnAvancado2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IbtnAvancado2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.IbtnAvancado2.IconChar = FontAwesome.Sharp.IconChar.Divide;
+            this.IbtnAvancado2.IconColor = System.Drawing.Color.Gainsboro;
+            this.IbtnAvancado2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IbtnAvancado2.IconSize = 32;
+            this.IbtnAvancado2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.IbtnAvancado2.Location = new System.Drawing.Point(0, 277);
+            this.IbtnAvancado2.Name = "IbtnAvancado2";
+            this.IbtnAvancado2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.IbtnAvancado2.Size = new System.Drawing.Size(209, 60);
+            this.IbtnAvancado2.TabIndex = 11;
+            this.IbtnAvancado2.Text = "Avançado2";
+            this.IbtnAvancado2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.IbtnAvancado2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IbtnAvancado2.UseVisualStyleBackColor = true;
+            this.IbtnAvancado2.Click += new System.EventHandler(this.IbtnAvancado2_Click);
             // 
             // IbtnAvancado1
             // 
@@ -487,7 +488,7 @@ namespace APP
         private FontAwesome.Sharp.IconButton IbtnLogout;
         private FontAwesome.Sharp.IconButton IbtnConfig;
         private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton4;
+        private FontAwesome.Sharp.IconButton IbtnAvancado2;
         private FontAwesome.Sharp.IconButton IbtnAvancado1;
         private FontAwesome.Sharp.IconButton IbtnSubtracao;
         private Guna.UI2.WinForms.Guna2Panel PnPai;

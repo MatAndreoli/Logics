@@ -52,6 +52,10 @@ namespace APP
                 {
                     currentBtn.IconChar = IconChar.Percentage;
                 }
+                if (currentBtn.Text == "Avançado2")
+                {
+                    currentBtn.IconChar = IconChar.Calculator;
+                }
                 currentBtn.BackColor = Color.FromArgb(31, 30, 80);
                 currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
@@ -80,6 +84,10 @@ namespace APP
                 if (currentBtn.Text == "Avançado1")
                 {
                     currentBtn.IconChar = IconChar.Times;
+                }
+                if (currentBtn.Text == "Avançado2")
+                {
+                    currentBtn.IconChar = IconChar.Divide;
                 }
                 currentBtn.BackColor = Color.FromArgb(31, 30, 68);
                 currentBtn.ForeColor = Color.Gainsboro;
@@ -193,6 +201,11 @@ namespace APP
         private void IbtnMultiplicacao_Click(object sender, EventArgs e)
         {
             OpenChild(new FrmAvancado1(), sender);
+        }
+
+        private void IbtnAvancado2_Click(object sender, EventArgs e)
+        {
+            OpenChild(new FrmAvancado2(), sender);
         }
 
         #endregion Methods
