@@ -12,7 +12,7 @@ using TCC.Classes;
 
 namespace TCC.Forms
 {
-    public partial class FrmMultiplicacao : Form
+    public partial class FrmAvancado1 : Form
     {
         private Random rand = new Random();
         private int timeLeft, certas, errado;
@@ -57,7 +57,7 @@ namespace TCC.Forms
             LblN2.Text = "000";
         }
 
-        public FrmMultiplicacao()
+        public FrmAvancado1()
         {
             InitializeComponent();
         }
@@ -91,8 +91,8 @@ namespace TCC.Forms
                             timer1.Stop();
                             TbResposta.Enabled = false;
                             BtnChecar.Enabled = false;
-                            UpdateMultiplicacao ad = new UpdateMultiplicacao();
-                            ad.MultiplicacaoUpdate(certas, errado);
+                            UpdateAvancado1 ad = new UpdateAvancado1();
+                            ad.Avancado1Update(certas, errado);
                             FrmParabens frmPara = new FrmParabens();
                             frmPara.Show();
                         }
@@ -140,8 +140,8 @@ namespace TCC.Forms
                             timer1.Stop();
                             TbResposta.Enabled = false;
                             BtnChecar.Enabled = false;
-                            UpdateMultiplicacao ad = new UpdateMultiplicacao();
-                            ad.MultiplicacaoUpdate(certas, errado);
+                            UpdateAvancado1 ad = new UpdateAvancado1();
+                            ad.Avancado1Update(certas, errado);
                             FrmParabens frmPara = new FrmParabens();
                             frmPara.Show();
                         }
@@ -173,16 +173,17 @@ namespace TCC.Forms
                 case "Multiplicação":
                     num1 = rand.Next(1, 99);
                     num2 = rand.Next(1, 9);
+                    LblN1.Text = num1.ToString();
+                    LblN2.Text = num2.ToString();
                     break;
 
                 case "Porcentagem":
                     num1 = NumRedondo();
                     num2 = Num2Redondo();
+                    LblN1.Text = num1.ToString() + "% de";
+                    LblN2.Text = num2.ToString();
                     break;
             }
-
-            LblN1.Text = num1.ToString() + "% de";
-            LblN2.Text = num2.ToString();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

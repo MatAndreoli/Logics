@@ -4,18 +4,18 @@ using System.Data.OleDb;
 
 namespace TCC.Classes
 {
-    internal class UpdateMultiplicacao
+    internal class UpdateAvancado1
     {
         private Connection conn = new Connection();
         private OleDbCommand cmd = new OleDbCommand();
         public int acertoUp, erroUp;
 
-        public void MultiplicacaoUpdate(int certo, int errado)
+        public void Avancado1Update(int certo, int errado)
         {
             GetAcertoErro(UserDados.Login);
             acertoUp = certo + UserDados.AcertoMul;
             erroUp = errado + UserDados.ErroMul;
-            cmd.CommandText = "update Multiplicacao set acertos = '" + acertoUp + "', erros = '" + erroUp + "' where loginM = '" + UserDados.Login + "'";
+            cmd.CommandText = "update Avancado1 set acertos = '" + acertoUp + "', erros = '" + erroUp + "' where loginA1 = '" + UserDados.Login + "'";
 
             try
             {
@@ -29,9 +29,9 @@ namespace TCC.Classes
             }
         }
 
-        public void GetAcertoErro(string loginM)
+        public void GetAcertoErro(string loginA1)
         {
-            cmd.CommandText = "select * from Multiplicacao where loginM = '" + loginM + "'";
+            cmd.CommandText = "select * from Avancado1 where loginA1 = '" + loginA1 + "'";
 
             try
             {

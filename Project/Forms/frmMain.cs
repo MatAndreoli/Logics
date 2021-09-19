@@ -48,7 +48,7 @@ namespace APP
                 ThemeColor cl = new ThemeColor();
                 Color color = cl.SelectColor();
                 currentBtn = (IconButton)senderBtn;
-                if (currentBtn.Text == "Multiplicação")
+                if (currentBtn.Text == "Avançado1")
                 {
                     currentBtn.IconChar = IconChar.Percentage;
                 }
@@ -77,7 +77,7 @@ namespace APP
         {
             if (currentBtn != null)
             {
-                if (currentBtn.Text == "Multiplicação")
+                if (currentBtn.Text == "Avançado1")
                 {
                     currentBtn.IconChar = IconChar.Times;
                 }
@@ -192,7 +192,7 @@ namespace APP
 
         private void IbtnMultiplicacao_Click(object sender, EventArgs e)
         {
-            OpenChild(new FrmMultiplicacao(), sender);
+            OpenChild(new FrmAvancado1(), sender);
         }
 
         #endregion Methods
