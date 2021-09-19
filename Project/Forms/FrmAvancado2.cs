@@ -1,4 +1,5 @@
-﻿using System;
+﻿using APP.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,38 +8,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using APP.Classes;
 using TCC.Classes;
 
 namespace TCC.Forms
 {
-    public partial class FrmMultiplicacao : Form
+    public partial class FrmAvancado2 : Form
     {
         private Random rand = new Random();
         private int timeLeft, certas, errado;
-        private double num1, num2;
+        private double num1, num2, num3, num4;
         private ThemeColor cl = new ThemeColor();
         private string BtnNivel = string.Empty;
         private Validacao val = new Validacao();
 
-        public int NumRedondo()
+        public FrmAvancado2()
         {
-            int n = rand.Next(10, 100);
-            while (n % 10 != 0)
-            {
-                n = rand.Next(10, 100);
-            }
-            return n;
-        }
-
-        public int Num2Redondo()
-        {
-            int n = rand.Next(100, 2000);
-            while (n % 100 != 0)
-            {
-                n = rand.Next(100, 2000);
-            }
-            return n;
+            InitializeComponent();
         }
 
         public void Reinicia()
@@ -54,19 +39,13 @@ namespace TCC.Forms
             timer1.Stop();
             LblTime.Text = "0:00";
             LblN1.Text = "000";
-            LblN2.Text = "000";
-        }
-
-        public FrmMultiplicacao()
-        {
-            InitializeComponent();
         }
 
         public void CheckAnswer()
         {
             switch (BtnNivel)
             {
-                case "Multiplicação":
+                case "Divisão":
                     if (TbResposta.Text?.Length == 0)
                     {
                         MessageBox.Show("Digite um número.");
@@ -77,7 +56,7 @@ namespace TCC.Forms
                         MessageBox.Show("Valor inválido.");
                         TbResposta.Clear();
                     }
-                    else if (num1 * num2 == Convert.ToInt32(TbResposta.Text))
+                    else if (num1 / num2 == Convert.ToInt32(TbResposta.Text))
                     {
                         TbResposta.BorderColor = Color.FromArgb(213, 218, 223);
                         TbResposta.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
@@ -91,10 +70,11 @@ namespace TCC.Forms
                             timer1.Stop();
                             TbResposta.Enabled = false;
                             BtnChecar.Enabled = false;
-                            UpdateMultiplicacao ad = new UpdateMultiplicacao();
-                            ad.MultiplicacaoUpdate(certas, errado);
+                            UpdateAvancado2 ad = new UpdateAvancado2();
+                            ad.Avancado2Update(certas, errado);
                             FrmParabens frmPara = new FrmParabens();
                             frmPara.Show();
+                            Reinicia();
                         }
                     }
                     else
@@ -115,7 +95,7 @@ namespace TCC.Forms
                     }
                     break;
 
-                case "Porcentagem":
+                case "Expressão Simples":
                     if (TbResposta.Text?.Length == 0)
                     {
                         MessageBox.Show("Digite um número.");
@@ -126,7 +106,7 @@ namespace TCC.Forms
                         MessageBox.Show("Valor inválido.");
                         TbResposta.Clear();
                     }
-                    else if ((num1 * num2) / 100 == Convert.ToInt32(TbResposta.Text))
+                    else if (num1 + num2 + (num3 * num4) == Convert.ToInt32(TbResposta.Text))
                     {
                         TbResposta.BorderColor = Color.FromArgb(213, 218, 223);
                         TbResposta.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
@@ -140,10 +120,11 @@ namespace TCC.Forms
                             timer1.Stop();
                             TbResposta.Enabled = false;
                             BtnChecar.Enabled = false;
-                            UpdateMultiplicacao ad = new UpdateMultiplicacao();
-                            ad.MultiplicacaoUpdate(certas, errado);
+                            UpdateAvancado2 ad = new UpdateAvancado2();
+                            ad.Avancado2Update(certas, errado);
                             FrmParabens frmPara = new FrmParabens();
                             frmPara.Show();
+                            Reinicia();
                         }
                     }
                     else
@@ -170,22 +151,135 @@ namespace TCC.Forms
         {
             switch (BtnNivel)
             {
-                case "Multiplicação":
-                    num1 = rand.Next(1, 99);
-                    num2 = rand.Next(1, 9);
-
-                    LblN1.Text = num1.ToString();
-                    LblN2.Text = num2.ToString();
+                case "Divisão":
+                    num1 = rand.Next(2, 100);
+                    num2 = rand.Next(2, 10);
+                    while (num1 % num2 != 0)
+                    {
+                        num1 = rand.Next(2, 100);
+                        num2 = rand.Next(2, 10);
+                    }
+                    LblN1.Text = num1.ToString() + "/" + num2.ToString();
                     break;
 
-                case "Porcentagem":
-                    num1 = NumRedondo();
-                    num2 = Num2Redondo();
-
-                    LblN1.Text = num1.ToString() + "% de";
-                    LblN2.Text = num2.ToString();
+                case "Expressão Simples":
+                    num1 = rand.Next(1, 10);
+                    num2 = rand.Next(1, 10);
+                    num3 = rand.Next(1, 10);
+                    num4 = rand.Next(1, 10);
+                    LblN1.Text = num1.ToString() + " + " + num2.ToString() + " + (" + num3.ToString() + " * " + num4.ToString() + ")";
                     break;
             }
+        }
+
+        private void BtnDivi_MouseEnter(object sender, EventArgs e)
+        {
+            Color color = cl.SelectColor();
+            ThemeColor.PrimaryColor = color;
+            BtnDivi.FillColor = color;
+            BtnDivi.BorderColor = color;
+        }
+
+        private void BtnDivi_MouseLeave(object sender, EventArgs e)
+        {
+            BtnDivi.FillColor = Color.FromArgb(36, 35, 80);
+        }
+
+        private void BtnStart_MouseLeave(object sender, EventArgs e)
+        {
+            BtnStart.FillColor = Color.FromArgb(36, 35, 80);
+        }
+
+        private void BtnStart_MouseEnter(object sender, EventArgs e)
+        {
+            Color color = cl.SelectColor();
+            ThemeColor.PrimaryColor = color;
+            BtnStart.FillColor = color;
+            BtnStart.BorderColor = color;
+        }
+
+        private void BtnChecar_MouseLeave(object sender, EventArgs e)
+        {
+            BtnChecar.FillColor = Color.FromArgb(36, 35, 80);
+        }
+
+        private void BtnChecar_MouseEnter(object sender, EventArgs e)
+        {
+            Color color = cl.SelectColor();
+            ThemeColor.PrimaryColor = color;
+            BtnChecar.FillColor = color;
+            BtnChecar.BorderColor = color;
+        }
+
+        private void BtnDivi_Click(object sender, EventArgs e)
+        {
+            Transition.HideSync(PnlOptions);
+            Transition.ShowSync(PnlGame);
+            BtnNivel = BtnDivi.Text;
+            LblN1.Text = "000/000";
+        }
+
+        private void BtnStart_Click(object sender, EventArgs e)
+        {
+            timeLeft = 70;
+            StartNumbers();
+            timer1.Start();
+            BtnChecar.Enabled = true;
+            TbResposta.Enabled = true;
+            TbResposta.ReadOnly = false;
+            TbResposta.Clear();
+            certas = 0;
+            errado = 0;
+            PrgPontos.Value = 0;
+        }
+
+        private void TbResposta_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                CheckAnswer();
+            }
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            Transition.HideSync(PnlGame);
+            Transition.ShowSync(PnlOptions);
+        }
+
+        private void BtnExpre_Click(object sender, EventArgs e)
+        {
+            Transition.HideSync(PnlOptions);
+            Transition.ShowSync(PnlGame);
+            BtnNivel = BtnExpre.Text;
+            LblN1.Text = "0 + 0 + (0 * 0)";
+        }
+
+        private void BtnExpre_MouseEnter(object sender, EventArgs e)
+        {
+            Color color = cl.SelectColor();
+            ThemeColor.PrimaryColor = color;
+            BtnExpre.FillColor = color;
+            BtnExpre.BorderColor = color;
+        }
+
+        private void BtnExpre_MouseLeave(object sender, EventArgs e)
+        {
+            BtnExpre.FillColor = Color.FromArgb(36, 35, 80);
+        }
+
+        private void BtnChecar_Click(object sender, EventArgs e)
+        {
+            CheckAnswer();
+        }
+
+        private void FrmAvancado2_Load(object sender, EventArgs e)
+        {
+            TbResposta.ReadOnly = true;
+            BtnChecar.Enabled = false;
+            PrgPontos.Value = 0;
+            PnlOptions.BorderColor = ThemeColor.PrimaryColor;
+            PnlGame.BorderColor = ThemeColor.PrimaryColor;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -203,120 +297,6 @@ namespace TCC.Forms
                 TbResposta.ReadOnly = true;
                 BtnChecar.Enabled = false;
             }
-        }
-
-        private void BtnChecar_Click(object sender, EventArgs e)
-        {
-            CheckAnswer();
-        }
-
-        private void BtnStart_Click(object sender, EventArgs e)
-        {
-            timeLeft = 70;
-            StartNumbers();
-            timer1.Start();
-            BtnChecar.Enabled = true;
-            TbResposta.Enabled = true;
-            TbResposta.ReadOnly = false;
-            TbResposta.Clear();
-            certas = 0;
-            errado = 0;
-            PrgPontos.Value = 0;
-        }
-
-        private void BtnChecar_MouseEnter(object sender, EventArgs e)
-        {
-            Color color = cl.SelectColor();
-            ThemeColor.PrimaryColor = color;
-            BtnChecar.FillColor = color;
-            BtnChecar.BorderColor = color;
-        }
-
-        private void BtnChecar_MouseLeave(object sender, EventArgs e)
-        {
-            BtnChecar.FillColor = Color.FromArgb(36, 35, 80);
-        }
-
-        private void BtnStart_MouseEnter(object sender, EventArgs e)
-        {
-            Color color = cl.SelectColor();
-            ThemeColor.PrimaryColor = color;
-            BtnStart.FillColor = color;
-            BtnStart.BorderColor = color;
-        }
-
-        private void BtnStart_MouseLeave(object sender, EventArgs e)
-        {
-            BtnStart.FillColor = Color.FromArgb(36, 35, 80);
-        }
-
-        private void BtnMulti_MouseLeave(object sender, EventArgs e)
-        {
-            BtnMulti.FillColor = Color.FromArgb(36, 35, 80);
-        }
-
-        private void BtnMulti_MouseEnter(object sender, EventArgs e)
-        {
-            Color color = cl.SelectColor();
-            ThemeColor.PrimaryColor = color;
-            BtnMulti.FillColor = color;
-            BtnMulti.BorderColor = color;
-        }
-
-        private void BtnPorc_MouseLeave(object sender, EventArgs e)
-        {
-            BtnPorc.FillColor = Color.FromArgb(36, 35, 80);
-        }
-
-        private void BtnPorc_MouseEnter(object sender, EventArgs e)
-        {
-            Color color = cl.SelectColor();
-            ThemeColor.PrimaryColor = color;
-            BtnPorc.FillColor = color;
-            BtnPorc.BorderColor = color;
-        }
-
-        private void FrmMultiplicacao_Load(object sender, EventArgs e)
-        {
-            TbResposta.ReadOnly = true;
-            BtnChecar.Enabled = false;
-            PrgPontos.Value = 0;
-            PnlOptions.BorderColor = ThemeColor.PrimaryColor;
-            PnlGame.BorderColor = ThemeColor.PrimaryColor;
-        }
-
-        private void TbResposta_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                CheckAnswer();
-            }
-        }
-
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-            Transition.HideSync(PnlGame);
-            Transition.ShowSync(PnlOptions);
-        }
-
-        private void BtnMulti_Click(object sender, EventArgs e)
-        {
-            Transition.HideSync(PnlOptions);
-            Transition.ShowSync(PnlGame);
-            BtnNivel = BtnMulti.Text;
-            LblMulti.Visible = true;
-            LblN1.Text = "000";
-            LblN2.Text = "000";
-        }
-
-        private void BtnPorc_Click(object sender, EventArgs e)
-        {
-            Transition.HideSync(PnlOptions);
-            Transition.ShowSync(PnlGame);
-            BtnNivel = BtnPorc.Text;
-            LblMulti.Visible = false;
-            LblN1.Text = "000 % de";
-            LblN2.Text = "000";
         }
     }
 }

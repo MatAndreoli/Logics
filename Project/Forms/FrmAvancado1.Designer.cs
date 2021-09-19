@@ -1,7 +1,7 @@
 ﻿
 namespace TCC.Forms
 {
-    partial class FrmMultiplicacao
+    partial class FrmAvancado1
     {
         /// <summary>
         /// Required designer variable.
@@ -30,9 +30,10 @@ namespace TCC.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMultiplicacao));
+            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAvancado1));
             this.PnlOptions = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.LblMultiExp = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -41,7 +42,6 @@ namespace TCC.Forms
             this.PnlGame = new Guna.UI2.WinForms.Guna2Panel();
             this.LblMulti = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.LblN2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.BtnStart = new Guna.UI2.WinForms.Guna2Button();
             this.BtnChecar = new Guna.UI2.WinForms.Guna2Button();
             this.LblN1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -50,7 +50,7 @@ namespace TCC.Forms
             this.LblTime = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Transition = new Guna.UI2.WinForms.Guna2Transition();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PnlOptions.SuspendLayout();
             this.PnlGame.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -73,6 +73,19 @@ namespace TCC.Forms
             this.PnlOptions.Size = new System.Drawing.Size(611, 432);
             this.PnlOptions.TabIndex = 20;
             // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.Transition.SetDecoration(this.guna2HtmlLabel3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.guna2HtmlLabel3.IsSelectionEnabled = false;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(393, 182);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(108, 23);
+            this.guna2HtmlLabel3.TabIndex = 24;
+            this.guna2HtmlLabel3.Text = "De 100 à 2000";
+            // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
@@ -93,11 +106,11 @@ namespace TCC.Forms
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Gainsboro;
             this.guna2HtmlLabel2.IsSelectionEnabled = false;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(336, 153);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(350, 153);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(222, 23);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(194, 23);
             this.guna2HtmlLabel2.TabIndex = 22;
-            this.guna2HtmlLabel2.Text = "Porcentagem de 10% à 100%";
+            this.guna2HtmlLabel2.Text = "Porcentagem de 10 à 100";
             // 
             // LblMultiExp
             // 
@@ -217,19 +230,6 @@ namespace TCC.Forms
             this.LblN2.Size = new System.Drawing.Size(72, 56);
             this.LblN2.TabIndex = 22;
             this.LblN2.Text = "000";
-            // 
-            // guna2PictureBox1
-            // 
-            this.Transition.SetDecoration(this.guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2PictureBox1.Image = global::TCC.Properties.Resources.Back;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(31, 29);
-            this.guna2PictureBox1.TabIndex = 21;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // BtnStart
             // 
@@ -375,37 +375,37 @@ namespace TCC.Forms
             // 
             this.Transition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
             this.Transition.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.Transition.DefaultAnimation = animation3;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.Transition.DefaultAnimation = animation2;
             // 
-            // guna2HtmlLabel3
+            // guna2PictureBox1
             // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.Transition.SetDecoration(this.guna2HtmlLabel3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.guna2HtmlLabel3.IsSelectionEnabled = false;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(393, 182);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(108, 23);
-            this.guna2HtmlLabel3.TabIndex = 24;
-            this.guna2HtmlLabel3.Text = "De 100 à 2000";
+            this.Transition.SetDecoration(this.guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2PictureBox1.Image = global::TCC.Properties.Resources.Back;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(31, 29);
+            this.guna2PictureBox1.TabIndex = 21;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
-            // FrmMultiplicacao
+            // FrmAvancado1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -415,8 +415,8 @@ namespace TCC.Forms
             this.Controls.Add(this.PnlGame);
             this.Transition.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmMultiplicacao";
-            this.Text = "Multiplicação";
+            this.Name = "FrmAvancado1";
+            this.Text = "Avançado1";
             this.Load += new System.EventHandler(this.FrmMultiplicacao_Load);
             this.PnlOptions.ResumeLayout(false);
             this.PnlOptions.PerformLayout();
@@ -446,7 +446,7 @@ namespace TCC.Forms
         private Guna.UI2.WinForms.Guna2HtmlLabel LblTime;
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2Transition Transition;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }
