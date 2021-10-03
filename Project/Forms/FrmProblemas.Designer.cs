@@ -40,14 +40,13 @@ namespace TCC.Forms
             // 
             this.LblPergunta.AutoSize = false;
             this.LblPergunta.BackColor = System.Drawing.Color.Transparent;
-            this.LblPergunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPergunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPergunta.ForeColor = System.Drawing.Color.Gainsboro;
             this.LblPergunta.Location = new System.Drawing.Point(12, 12);
             this.LblPergunta.Name = "LblPergunta";
-            this.LblPergunta.Size = new System.Drawing.Size(620, 156);
+            this.LblPergunta.Size = new System.Drawing.Size(620, 241);
             this.LblPergunta.TabIndex = 0;
-            this.LblPergunta.Text = "Cinco homens cavam uma vala de 5 metros em cinco\r\nhoras. Quantos cavadores serão " +
-    "necessários para cavar\r\numa vala de 100 metros em 100 horas?\r\n\r\n";
+            this.LblPergunta.Text = "Perguntas";
             this.LblPergunta.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // BtnR1
@@ -68,13 +67,14 @@ namespace TCC.Forms
             this.BtnR1.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnR1.ForeColor = System.Drawing.Color.White;
             this.BtnR1.HoverState.Parent = this.BtnR1;
-            this.BtnR1.Location = new System.Drawing.Point(131, 254);
+            this.BtnR1.Location = new System.Drawing.Point(118, 271);
             this.BtnR1.Name = "BtnR1";
             this.BtnR1.ShadowDecoration.Parent = this.BtnR1;
-            this.BtnR1.Size = new System.Drawing.Size(132, 36);
+            this.BtnR1.Size = new System.Drawing.Size(132, 38);
             this.BtnR1.TabIndex = 21;
             this.BtnR1.Tag = "1";
             this.BtnR1.Text = "????";
+            this.BtnR1.Click += new System.EventHandler(this.CheckAnswer);
             this.BtnR1.MouseEnter += new System.EventHandler(this.MudarCor);
             this.BtnR1.MouseLeave += new System.EventHandler(this.TirarFill);
             // 
@@ -96,13 +96,14 @@ namespace TCC.Forms
             this.BtnR2.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnR2.ForeColor = System.Drawing.Color.White;
             this.BtnR2.HoverState.Parent = this.BtnR2;
-            this.BtnR2.Location = new System.Drawing.Point(393, 254);
+            this.BtnR2.Location = new System.Drawing.Point(386, 271);
             this.BtnR2.Name = "BtnR2";
             this.BtnR2.ShadowDecoration.Parent = this.BtnR2;
-            this.BtnR2.Size = new System.Drawing.Size(132, 36);
+            this.BtnR2.Size = new System.Drawing.Size(132, 38);
             this.BtnR2.TabIndex = 22;
             this.BtnR2.Tag = "2";
             this.BtnR2.Text = "????";
+            this.BtnR2.Click += new System.EventHandler(this.CheckAnswer);
             this.BtnR2.MouseEnter += new System.EventHandler(this.MudarCor);
             this.BtnR2.MouseLeave += new System.EventHandler(this.TirarFill);
             // 
@@ -124,13 +125,14 @@ namespace TCC.Forms
             this.BtnR3.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnR3.ForeColor = System.Drawing.Color.White;
             this.BtnR3.HoverState.Parent = this.BtnR3;
-            this.BtnR3.Location = new System.Drawing.Point(131, 358);
+            this.BtnR3.Location = new System.Drawing.Point(118, 373);
             this.BtnR3.Name = "BtnR3";
             this.BtnR3.ShadowDecoration.Parent = this.BtnR3;
-            this.BtnR3.Size = new System.Drawing.Size(132, 36);
+            this.BtnR3.Size = new System.Drawing.Size(132, 38);
             this.BtnR3.TabIndex = 23;
             this.BtnR3.Tag = "3";
             this.BtnR3.Text = "????";
+            this.BtnR3.Click += new System.EventHandler(this.CheckAnswer);
             this.BtnR3.MouseEnter += new System.EventHandler(this.MudarCor);
             this.BtnR3.MouseLeave += new System.EventHandler(this.TirarFill);
             // 
@@ -152,13 +154,14 @@ namespace TCC.Forms
             this.BtnR4.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnR4.ForeColor = System.Drawing.Color.White;
             this.BtnR4.HoverState.Parent = this.BtnR4;
-            this.BtnR4.Location = new System.Drawing.Point(393, 358);
+            this.BtnR4.Location = new System.Drawing.Point(386, 373);
             this.BtnR4.Name = "BtnR4";
             this.BtnR4.ShadowDecoration.Parent = this.BtnR4;
-            this.BtnR4.Size = new System.Drawing.Size(132, 36);
+            this.BtnR4.Size = new System.Drawing.Size(132, 38);
             this.BtnR4.TabIndex = 24;
             this.BtnR4.Tag = "4";
             this.BtnR4.Text = "????";
+            this.BtnR4.Click += new System.EventHandler(this.CheckAnswer);
             this.BtnR4.MouseEnter += new System.EventHandler(this.MudarCor);
             this.BtnR4.MouseLeave += new System.EventHandler(this.TirarFill);
             // 
@@ -175,6 +178,7 @@ namespace TCC.Forms
             this.Controls.Add(this.LblPergunta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmProblemas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Problemas Lógicas";
             this.ResumeLayout(false);
 

@@ -208,6 +208,11 @@ namespace APP
             OpenChild(new FrmAvancado2(), sender);
         }
 
+        private void IbtnProblemas_Click(object sender, EventArgs e)
+        {
+            OpenChild(new FrmProblemas(), sender);
+        }
+
         #endregion Methods
     }
 }

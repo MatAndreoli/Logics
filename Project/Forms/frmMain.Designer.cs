@@ -34,7 +34,7 @@ namespace APP
             this.PnMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.IbtnLogout = new FontAwesome.Sharp.IconButton();
             this.IbtnConfig = new FontAwesome.Sharp.IconButton();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.IbtnProblemas = new FontAwesome.Sharp.IconButton();
             this.IbtnAvancado2 = new FontAwesome.Sharp.IconButton();
             this.IbtnAvancado1 = new FontAwesome.Sharp.IconButton();
             this.IbtnSubtracao = new FontAwesome.Sharp.IconButton();
@@ -71,7 +71,7 @@ namespace APP
             this.PnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
             this.PnMenu.Controls.Add(this.IbtnLogout);
             this.PnMenu.Controls.Add(this.IbtnConfig);
-            this.PnMenu.Controls.Add(this.iconButton5);
+            this.PnMenu.Controls.Add(this.IbtnProblemas);
             this.PnMenu.Controls.Add(this.IbtnAvancado2);
             this.PnMenu.Controls.Add(this.IbtnAvancado1);
             this.PnMenu.Controls.Add(this.IbtnSubtracao);
@@ -132,28 +132,29 @@ namespace APP
             this.IbtnConfig.UseVisualStyleBackColor = true;
             this.IbtnConfig.Click += new System.EventHandler(this.IbtnConfig_Click);
             // 
-            // iconButton5
+            // IbtnProblemas
             // 
-            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton5.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 32;
-            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(0, 337);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton5.Size = new System.Drawing.Size(209, 60);
-            this.iconButton5.TabIndex = 12;
-            this.iconButton5.Text = "iconButton5";
-            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton5.UseVisualStyleBackColor = true;
+            this.IbtnProblemas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.IbtnProblemas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.IbtnProblemas.FlatAppearance.BorderSize = 0;
+            this.IbtnProblemas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IbtnProblemas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IbtnProblemas.ForeColor = System.Drawing.Color.Gainsboro;
+            this.IbtnProblemas.IconChar = FontAwesome.Sharp.IconChar.Brain;
+            this.IbtnProblemas.IconColor = System.Drawing.Color.Gainsboro;
+            this.IbtnProblemas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IbtnProblemas.IconSize = 32;
+            this.IbtnProblemas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.IbtnProblemas.Location = new System.Drawing.Point(0, 337);
+            this.IbtnProblemas.Name = "IbtnProblemas";
+            this.IbtnProblemas.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.IbtnProblemas.Size = new System.Drawing.Size(209, 60);
+            this.IbtnProblemas.TabIndex = 12;
+            this.IbtnProblemas.Text = "Problemas Lógicos";
+            this.IbtnProblemas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.IbtnProblemas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IbtnProblemas.UseVisualStyleBackColor = true;
+            this.IbtnProblemas.Click += new System.EventHandler(this.IbtnProblemas_Click);
             // 
             // IbtnAvancado2
             // 
@@ -487,7 +488,7 @@ namespace APP
         private System.Windows.Forms.Label LblTitle;
         private FontAwesome.Sharp.IconButton IbtnLogout;
         private FontAwesome.Sharp.IconButton IbtnConfig;
-        private FontAwesome.Sharp.IconButton iconButton5;
+        private FontAwesome.Sharp.IconButton IbtnProblemas;
         private FontAwesome.Sharp.IconButton IbtnAvancado2;
         private FontAwesome.Sharp.IconButton IbtnAvancado1;
         private FontAwesome.Sharp.IconButton IbtnSubtracao;
