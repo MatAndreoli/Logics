@@ -149,6 +149,12 @@
     <Compile Include="Forms\FrmParabens.Designer.cs">
       <DependentUpon>FrmParabens.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmProblemas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmProblemas.Designer.cs">
+      <DependentUpon>FrmProblemas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmParabens.resx">
       <DependentUpon>FrmParabens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmProblemas.resx">
+      <DependentUpon>FrmProblemas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmSplash.resx">
       <DependentUpon>FrmSplash.cs</DependentUpon>
