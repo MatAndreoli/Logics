@@ -99,6 +99,7 @@
     <Compile Include="Classes\Cadastro.cs" />
     <Compile Include="Classes\Adicao.cs" />
     <Compile Include="Classes\Avancado1.cs" />
+    <Compile Include="Classes\NQuestao.cs" />
     <Compile Include="Classes\Subtracao.cs" />
     <Compile Include="Classes\ThemeColor.cs" />
     <Compile Include="Classes\UpdateAdicao.cs" />

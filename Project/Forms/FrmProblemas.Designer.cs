@@ -34,6 +34,8 @@ namespace TCC.Forms
             this.BtnR2 = new Guna.UI2.WinForms.Guna2Button();
             this.BtnR3 = new Guna.UI2.WinForms.Guna2Button();
             this.BtnR4 = new Guna.UI2.WinForms.Guna2Button();
+            this.IpbExplic = new FontAwesome.Sharp.IconPictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.IpbExplic)).BeginInit();
             this.SuspendLayout();
             // 
             // LblPergunta
@@ -165,12 +167,27 @@ namespace TCC.Forms
             this.BtnR4.MouseEnter += new System.EventHandler(this.MudarCor);
             this.BtnR4.MouseLeave += new System.EventHandler(this.TirarFill);
             // 
+            // IpbExplic
+            // 
+            this.IpbExplic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
+            this.IpbExplic.ForeColor = System.Drawing.Color.Gainsboro;
+            this.IpbExplic.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.IpbExplic.IconColor = System.Drawing.Color.Gainsboro;
+            this.IpbExplic.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.IpbExplic.Location = new System.Drawing.Point(629, 2);
+            this.IpbExplic.Name = "IpbExplic";
+            this.IpbExplic.Size = new System.Drawing.Size(32, 32);
+            this.IpbExplic.TabIndex = 25;
+            this.IpbExplic.TabStop = false;
+            this.IpbExplic.Click += new System.EventHandler(this.IpbExplic_Click);
+            // 
             // FrmProblemas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(662, 456);
+            this.Controls.Add(this.IpbExplic);
             this.Controls.Add(this.BtnR4);
             this.Controls.Add(this.BtnR3);
             this.Controls.Add(this.BtnR2);
@@ -180,6 +197,8 @@ namespace TCC.Forms
             this.Name = "FrmProblemas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Problemas Lógicos";
+            this.Load += new System.EventHandler(this.FrmProblemas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.IpbExplic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -191,5 +210,6 @@ namespace TCC.Forms
         private Guna.UI2.WinForms.Guna2Button BtnR2;
         private Guna.UI2.WinForms.Guna2Button BtnR3;
         private Guna.UI2.WinForms.Guna2Button BtnR4;
+        private FontAwesome.Sharp.IconPictureBox IpbExplic;
     }
 }

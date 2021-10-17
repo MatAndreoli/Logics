@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TCC.Classes;
 
 namespace TCC.Forms
 {
@@ -38,6 +39,7 @@ namespace TCC.Forms
                     BtnR4.Text = "50";
 
                     correctAnswer = 1;
+                    NQuestao.NQuest = 1;
 
                     break;
 
@@ -56,6 +58,7 @@ namespace TCC.Forms
                     BtnR4.Width += 50;
 
                     correctAnswer = 2;
+                    NQuestao.NQuest = 2;
                     break;
 
                 case 3:
@@ -71,6 +74,7 @@ namespace TCC.Forms
                     BtnR4.Width = 132;
 
                     correctAnswer = 3;
+                    NQuestao.NQuest = 3;
                     break;
 
                 case 4:
@@ -89,6 +93,7 @@ namespace TCC.Forms
                     BtnR4.Width += 50;
 
                     correctAnswer = 2;
+                    NQuestao.NQuest = 4;
                     break;
 
                 case 5:
@@ -104,6 +109,7 @@ namespace TCC.Forms
                     BtnR4.Width = 132;
 
                     correctAnswer = 4;
+                    NQuestao.NQuest = 5;
                     break;
 
                 case 6:
@@ -124,6 +130,7 @@ namespace TCC.Forms
                     BtnR4.Location = new Point(330, 330);
 
                     correctAnswer = 4;
+                    NQuestao.NQuest = 6;
                     break;
 
                 case 7:
@@ -144,6 +151,7 @@ namespace TCC.Forms
                     BtnR4.Location = new Point(353, 362);
 
                     correctAnswer = 3;
+                    NQuestao.NQuest = 7;
                     break;
 
                 case 8:
@@ -164,6 +172,7 @@ namespace TCC.Forms
                     BtnR4.Location = new Point(386, 373);
 
                     correctAnswer = 1;
+                    NQuestao.NQuest = 8;
                     break;
 
                 case 9:
@@ -175,6 +184,7 @@ namespace TCC.Forms
                     BtnR4.Text = "201";
 
                     correctAnswer = 4;
+                    NQuestao.NQuest = 9;
                     break;
 
                 case 10:
@@ -186,6 +196,7 @@ namespace TCC.Forms
                     BtnR4.Text = "FGIH";
 
                     correctAnswer = 4;
+                    NQuestao.NQuest = 10;
                     break;
 
                 case 11:
@@ -197,6 +208,7 @@ namespace TCC.Forms
                     BtnR4.Text = "OPOO";
 
                     correctAnswer = 2;
+                    NQuestao.NQuest = 11;
                     break;
             }
         }
@@ -208,6 +220,17 @@ namespace TCC.Forms
             Guna2Button ib = (Guna2Button)sender;
             ib.FillColor = color;
             ib.BorderColor = color;
+        }
+
+        private void FrmProblemas_Load(object sender, EventArgs e)
+        {
+            IpbExplic.IconColor = ThemeColor.PrimaryColor;
+        }
+
+        private void IpbExplic_Click(object sender, EventArgs e)
+        {
+            FrmExplicacao explic = new FrmExplicacao();
+            explic.Show();
         }
 
         private void CheckAnswer(object sender, EventArgs e)
