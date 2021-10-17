@@ -93,6 +93,7 @@ namespace APP.Forms
             this.Controls.Add(this.LblIdade);
             this.Controls.Add(this.LblEmail);
             this.Controls.Add(this.LblUser);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmConfiguracoes";
             this.Text = "Configurações";
             this.Load += new System.EventHandler(this.FrmConfiguracoes_Load);

@@ -179,7 +179,7 @@ namespace TCC.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmProblemas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Problemas Lógicas";
+            this.Text = "Problemas Lógicos";
             this.ResumeLayout(false);
 
         }
