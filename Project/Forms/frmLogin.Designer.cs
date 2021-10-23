@@ -395,7 +395,7 @@ namespace TCC.Forms
             this.TbNome.Name = "TbNome";
             this.TbNome.PasswordChar = '\0';
             this.TbNome.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.TbNome.PlaceholderText = "Primeiro Nome";
+            this.TbNome.PlaceholderText = "Nome";
             this.TbNome.SelectedText = "";
             this.TbNome.ShadowDecoration.Parent = this.TbNome;
             this.TbNome.Size = new System.Drawing.Size(200, 36);

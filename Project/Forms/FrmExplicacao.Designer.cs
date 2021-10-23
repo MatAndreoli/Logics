@@ -43,14 +43,14 @@ namespace TCC.Forms
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Pnlpai = new Guna.UI2.WinForms.Guna2Panel();
-            this.iconPictureBox16 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox6 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox7 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox8 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox7 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox6 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox16 = new FontAwesome.Sharp.IconPictureBox();
             this.PnlOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox14)).BeginInit();
@@ -63,14 +63,14 @@ namespace TCC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.Pnlpai.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox16)).BeginInit();
             this.SuspendLayout();
             // 
             // LblExplicacao
@@ -79,6 +79,7 @@ namespace TCC.Forms
             this.LblExplicacao.BackColor = System.Drawing.Color.Transparent;
             this.LblExplicacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblExplicacao.ForeColor = System.Drawing.Color.Gainsboro;
+            this.LblExplicacao.IsSelectionEnabled = false;
             this.LblExplicacao.Location = new System.Drawing.Point(3, 3);
             this.LblExplicacao.Name = "LblExplicacao";
             this.LblExplicacao.Size = new System.Drawing.Size(620, 287);
@@ -260,89 +261,19 @@ namespace TCC.Forms
             this.Pnlpai.TabIndex = 71;
             this.Pnlpai.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Pnlpai_MouseDown);
             // 
-            // iconPictureBox16
+            // iconPictureBox8
             // 
-            this.iconPictureBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
-            this.iconPictureBox16.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox16.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.iconPictureBox16.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox16.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox16.IconSize = 38;
-            this.iconPictureBox16.Location = new System.Drawing.Point(412, 409);
-            this.iconPictureBox16.Name = "iconPictureBox16";
-            this.iconPictureBox16.Size = new System.Drawing.Size(38, 38);
-            this.iconPictureBox16.TabIndex = 73;
-            this.iconPictureBox16.TabStop = false;
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Brain;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 38;
-            this.iconPictureBox1.Location = new System.Drawing.Point(412, 0);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(38, 38);
-            this.iconPictureBox1.TabIndex = 74;
-            this.iconPictureBox1.TabStop = false;
-            // 
-            // iconPictureBox4
-            // 
-            this.iconPictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
-            this.iconPictureBox4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.SquareRootAlt;
-            this.iconPictureBox4.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox4.IconSize = 38;
-            this.iconPictureBox4.Location = new System.Drawing.Point(12, 190);
-            this.iconPictureBox4.Name = "iconPictureBox4";
-            this.iconPictureBox4.Size = new System.Drawing.Size(38, 38);
-            this.iconPictureBox4.TabIndex = 76;
-            this.iconPictureBox4.TabStop = false;
-            // 
-            // iconPictureBox5
-            // 
-            this.iconPictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
-            this.iconPictureBox5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.iconPictureBox5.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox5.IconSize = 38;
-            this.iconPictureBox5.Location = new System.Drawing.Point(643, 3);
-            this.iconPictureBox5.Name = "iconPictureBox5";
-            this.iconPictureBox5.Size = new System.Drawing.Size(38, 38);
-            this.iconPictureBox5.TabIndex = 77;
-            this.iconPictureBox5.TabStop = false;
-            // 
-            // iconPictureBox6
-            // 
-            this.iconPictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
-            this.iconPictureBox6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox6.IconChar = FontAwesome.Sharp.IconChar.Brain;
-            this.iconPictureBox6.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox6.IconSize = 38;
-            this.iconPictureBox6.Location = new System.Drawing.Point(255, 367);
-            this.iconPictureBox6.Name = "iconPictureBox6";
-            this.iconPictureBox6.Size = new System.Drawing.Size(38, 38);
-            this.iconPictureBox6.TabIndex = 78;
-            this.iconPictureBox6.TabStop = false;
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
-            this.iconPictureBox2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.SquareRootAlt;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 38;
-            this.iconPictureBox2.Location = new System.Drawing.Point(750, 92);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(38, 38);
-            this.iconPictureBox2.TabIndex = 79;
-            this.iconPictureBox2.TabStop = false;
+            this.iconPictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
+            this.iconPictureBox8.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox8.IconChar = FontAwesome.Sharp.IconChar.Divide;
+            this.iconPictureBox8.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox8.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox8.IconSize = 38;
+            this.iconPictureBox8.Location = new System.Drawing.Point(724, 48);
+            this.iconPictureBox8.Name = "iconPictureBox8";
+            this.iconPictureBox8.Size = new System.Drawing.Size(38, 38);
+            this.iconPictureBox8.TabIndex = 81;
+            this.iconPictureBox8.TabStop = false;
             // 
             // iconPictureBox7
             // 
@@ -358,19 +289,89 @@ namespace TCC.Forms
             this.iconPictureBox7.TabIndex = 80;
             this.iconPictureBox7.TabStop = false;
             // 
-            // iconPictureBox8
+            // iconPictureBox2
             // 
-            this.iconPictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
-            this.iconPictureBox8.ForeColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox8.IconChar = FontAwesome.Sharp.IconChar.Divide;
-            this.iconPictureBox8.IconColor = System.Drawing.Color.Gainsboro;
-            this.iconPictureBox8.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox8.IconSize = 38;
-            this.iconPictureBox8.Location = new System.Drawing.Point(724, 48);
-            this.iconPictureBox8.Name = "iconPictureBox8";
-            this.iconPictureBox8.Size = new System.Drawing.Size(38, 38);
-            this.iconPictureBox8.TabIndex = 81;
-            this.iconPictureBox8.TabStop = false;
+            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.SquareRootAlt;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 38;
+            this.iconPictureBox2.Location = new System.Drawing.Point(750, 92);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(38, 38);
+            this.iconPictureBox2.TabIndex = 79;
+            this.iconPictureBox2.TabStop = false;
+            // 
+            // iconPictureBox6
+            // 
+            this.iconPictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
+            this.iconPictureBox6.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox6.IconChar = FontAwesome.Sharp.IconChar.Brain;
+            this.iconPictureBox6.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox6.IconSize = 38;
+            this.iconPictureBox6.Location = new System.Drawing.Point(255, 367);
+            this.iconPictureBox6.Name = "iconPictureBox6";
+            this.iconPictureBox6.Size = new System.Drawing.Size(38, 38);
+            this.iconPictureBox6.TabIndex = 78;
+            this.iconPictureBox6.TabStop = false;
+            // 
+            // iconPictureBox5
+            // 
+            this.iconPictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
+            this.iconPictureBox5.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.iconPictureBox5.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox5.IconSize = 38;
+            this.iconPictureBox5.Location = new System.Drawing.Point(643, 3);
+            this.iconPictureBox5.Name = "iconPictureBox5";
+            this.iconPictureBox5.Size = new System.Drawing.Size(38, 38);
+            this.iconPictureBox5.TabIndex = 77;
+            this.iconPictureBox5.TabStop = false;
+            // 
+            // iconPictureBox4
+            // 
+            this.iconPictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
+            this.iconPictureBox4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.SquareRootAlt;
+            this.iconPictureBox4.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox4.IconSize = 38;
+            this.iconPictureBox4.Location = new System.Drawing.Point(12, 190);
+            this.iconPictureBox4.Name = "iconPictureBox4";
+            this.iconPictureBox4.Size = new System.Drawing.Size(38, 38);
+            this.iconPictureBox4.TabIndex = 76;
+            this.iconPictureBox4.TabStop = false;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Brain;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 38;
+            this.iconPictureBox1.Location = new System.Drawing.Point(412, 0);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(38, 38);
+            this.iconPictureBox1.TabIndex = 74;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // iconPictureBox16
+            // 
+            this.iconPictureBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
+            this.iconPictureBox16.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox16.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.iconPictureBox16.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconPictureBox16.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox16.IconSize = 38;
+            this.iconPictureBox16.Location = new System.Drawing.Point(412, 409);
+            this.iconPictureBox16.Name = "iconPictureBox16";
+            this.iconPictureBox16.Size = new System.Drawing.Size(38, 38);
+            this.iconPictureBox16.TabIndex = 73;
+            this.iconPictureBox16.TabStop = false;
             // 
             // FrmExplicacao
             // 
@@ -399,14 +400,14 @@ namespace TCC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.Pnlpai.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox16)).EndInit();
             this.ResumeLayout(false);
 
         }
