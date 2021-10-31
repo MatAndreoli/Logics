@@ -386,6 +386,7 @@ namespace TCC.Forms
             this.Controls.Add(this.Pnlpai);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmExplicacao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Explicação";
             this.Load += new System.EventHandler(this.FrmExplicacao_Load);
             this.PnlOptions.ResumeLayout(false);
