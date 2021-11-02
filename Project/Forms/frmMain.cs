@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using TCC.Forms;
+using TCC.Classes;
 
 namespace APP
 {
@@ -22,6 +23,10 @@ namespace APP
         private Panel leftBorderBtn;
         private Form activeForm;
         private DateTime dt = new DateTime();
+        private UpdateAdicao upA = new UpdateAdicao();
+        private UpdateSubtracao upS = new UpdateSubtracao();
+        private UpdateAvancado1 upA1 = new UpdateAvancado1();
+        private UpdateAvancado2 upA2 = new UpdateAvancado2();
 
         #endregion Variables and Instances
 
@@ -137,6 +142,10 @@ namespace APP
             TimerEntrar.Start();
             dt = DateTime.Now;
             LblDate.Text = dt.ToLongDateString();
+            upA.GetAcertoErro(UserDados.Login);
+            upS.GetAcertoErro(UserDados.Login);
+            upA1.GetAcertoErro(UserDados.Login);
+            upA2.GetAcertoErro(UserDados.Login);
         }
 
         private void IbtnLogout_Click(object sender, EventArgs e)

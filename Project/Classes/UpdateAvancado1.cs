@@ -13,8 +13,8 @@ namespace TCC.Classes
         public void Avancado1Update(int certo, int errado)
         {
             GetAcertoErro(UserDados.Login);
-            acertoUp = certo + UserDados.AcertoMul;
-            erroUp = errado + UserDados.ErroMul;
+            acertoUp = certo + UserDados.AcertoAvan1;
+            erroUp = errado + UserDados.ErroAvan1;
             cmd.CommandText = "update Avancado1 set acertos = '" + acertoUp + "', erros = '" + erroUp + "' where loginA1 = '" + UserDados.Login + "'";
 
             try
@@ -22,6 +22,7 @@ namespace TCC.Classes
                 cmd.Connection = conn.Connect();
                 cmd.ExecuteNonQuery();
                 conn.Disconnect();
+                GetAcertoErro(UserDados.Login);
             }
             catch (OleDbException)
             {
@@ -41,9 +42,9 @@ namespace TCC.Classes
                 {
                     while (read.Read())
                     {
-                        UserDados.AcertoMul = read.GetInt32(1);
-                        UserDados.ErroMul = read.GetInt32(2);
-                        UserDados.TotalMul = read.GetInt32(3);
+                        UserDados.AcertoAvan1 = read.GetInt32(1);
+                        UserDados.ErroAvan1 = read.GetInt32(2);
+                        UserDados.TotalAvan1 = read.GetInt32(3);
                     }
                 }
                 read.Close();

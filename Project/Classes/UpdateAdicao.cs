@@ -22,6 +22,7 @@ namespace TCC.Classes
                 cmd.Connection = conn.Connect();
                 cmd.ExecuteNonQuery();
                 conn.Disconnect();
+                GetAcertoErro(UserDados.Login);
             }
             catch (OleDbException)
             {

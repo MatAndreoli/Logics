@@ -12,8 +12,11 @@
         public static int AcertoSub { get; set; }
         public static int ErroSub { get; set; }
         public static int TotalSub { get; set; }
-        public static int AcertoMul { get; set; }
-        public static int ErroMul { get; set; }
-        public static int TotalMul { get; set; }
+        public static int AcertoAvan1 { get; set; }
+        public static int ErroAvan1 { get; set; }
+        public static int TotalAvan1 { get; set; }
+        public static int AcertoAvan2 { get; set; }
+        public static int ErroAvan2 { get; set; }
+        public static int TotalAvan2 { get; set; }
     }
 }
