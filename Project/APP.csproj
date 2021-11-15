@@ -156,6 +156,12 @@
     <Compile Include="Forms\FrmParabens.Designer.cs">
       <DependentUpon>FrmParabens.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmPontuacaoLogica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPontuacaoLogica.Designer.cs">
+      <DependentUpon>FrmPontuacaoLogica.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmProblemas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmParabens.resx">
       <DependentUpon>FrmParabens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPontuacaoLogica.resx">
+      <DependentUpon>FrmPontuacaoLogica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmProblemas.resx">
       <DependentUpon>FrmProblemas.cs</DependentUpon>

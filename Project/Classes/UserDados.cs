@@ -18,5 +18,6 @@
         public static int AcertoAvan2 { get; set; }
         public static int ErroAvan2 { get; set; }
         public static int TotalAvan2 { get; set; }
+        public static int Pontuacao { get; set; }
     }
 }

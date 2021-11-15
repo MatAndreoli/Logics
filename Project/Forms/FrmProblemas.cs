@@ -17,7 +17,7 @@ namespace TCC.Forms
     public partial class FrmProblemas : Form
     {
         private ThemeColor cl = new ThemeColor();
-        private int correctAnswer, questionNumber = 1, score = 0;
+        private int correctAnswer, questionNumber = 1, score;
 
         public FrmProblemas()
         {
@@ -30,7 +30,7 @@ namespace TCC.Forms
             switch (num)
             {
                 case 1:
-                    LblPergunta.Text = "Cinco homens cavam uma vala de 5 metros em cinco horas. " +
+                    LblPergunta.Text = "1. Cinco homens cavam uma vala de 5 metros em cinco horas. " +
                         "Quantos cavadores serão necessários para cavar uma vala de 100 metros em 100 horas ? ";
 
                     BtnR1.Text = "5";
@@ -44,7 +44,7 @@ namespace TCC.Forms
                     break;
 
                 case 2:
-                    LblPergunta.Text = "Alguns consideram que a cidade de Florianópolis foi fundada no dia 23 de março de 1726, " +
+                    LblPergunta.Text = "2. Alguns consideram que a cidade de Florianópolis foi fundada no dia 23 de março de 1726, " +
                         "que caiu em um sábado. Após 90 dias, no dia 21 de junho, a data assinalou o início do inverno, " +
                         "quando a noite é a mais longa do ano. Esse dia caiu em uma:";
 
@@ -62,7 +62,7 @@ namespace TCC.Forms
                     break;
 
                 case 3:
-                    LblPergunta.Text = "Duas tartarugas estavam juntas e começaram a caminhar em linha reta em direção a um lago distante. A primeira tartaruga percorreu 30 metros por dia e demorou 16 dias para chegar ao lago. A segunda tartaruga só conseguiu percorrer 20 metros por dia e, portanto, chegou ao lago alguns dias depois da primeira. Quando a primeira tartaruga chegou ao lago, o número de dias que ela teve que esperar para a segunda tartaruga chegar foi:";
+                    LblPergunta.Text = "3. Duas tartarugas estavam juntas e começaram a caminhar em linha reta em direção a um lago distante. A primeira tartaruga percorreu 30 metros por dia e demorou 16 dias para chegar ao lago. A segunda tartaruga só conseguiu percorrer 20 metros por dia e, portanto, chegou ao lago alguns dias depois da primeira. Quando a primeira tartaruga chegou ao lago, o número de dias que ela teve que esperar para a segunda tartaruga chegar foi:";
 
                     BtnR1.Text = "6";
                     BtnR2.Text = "7";
@@ -78,7 +78,7 @@ namespace TCC.Forms
                     break;
 
                 case 4:
-                    LblPergunta.Text = "Em um sistema de codificação, AB representa os algarismos do dia do nascimento de uma pessoa e CD os algarismos de seu mês de nascimento. " +
+                    LblPergunta.Text = "4. Em um sistema de codificação, AB representa os algarismos do dia do nascimento de uma pessoa e CD os algarismos de seu mês de nascimento. " +
                         "Nesse sistema, a data trinta de julho, por exemplo, corresponderia a: A = 3;  B = 0;  C = 0;  D = 7; " +
                         "Admita uma pessoa cuja data de nascimento obedeça à seguinte condição: " +
                         "A + B + C + D = 20;  O mês de nascimento dessa pessoa é: ";
@@ -97,7 +97,7 @@ namespace TCC.Forms
                     break;
 
                 case 5:
-                    LblPergunta.Text = "Quantas vezes se pode subtrair o número 1 do número 1.111 ? ";
+                    LblPergunta.Text = "5. Quantas vezes se pode subtrair o número 1 do número 1.111 ? ";
 
                     BtnR1.Text = "2";
                     BtnR2.Text = "3";
@@ -113,7 +113,7 @@ namespace TCC.Forms
                     break;
 
                 case 6:
-                    LblPergunta.Text = "Sabendo que é verdadeira a afirmação “Todos os alunos de Fulano foram aprovados no concurso”, então é necessariamente verdade:";
+                    LblPergunta.Text = "6. Sabendo que é verdadeira a afirmação “Todos os alunos de Fulano foram aprovados no concurso”, então é necessariamente verdade:";
 
                     BtnR1.Text = "Fulano não foi aprovado no concurso.";
                     BtnR2.Text = "Se Roberto não é aluno de Fulano, então ele não foi aprovado no concurso.";
@@ -134,7 +134,7 @@ namespace TCC.Forms
                     break;
 
                 case 7:
-                    LblPergunta.Text = "Dona Maria tem quatro filhos: Francisco, Paulo, Raimundo e Sebastião. A esse respeito, sabe-se que: I.Sebastião é mais velho que Raimundo. II.Francisco é mais novo que Paulo. III.Paulo é mais velho que Raimundo. Assim, é obrigatoriamente verdadeiro que: ";
+                    LblPergunta.Text = "7. Dona Maria tem quatro filhos: Francisco, Paulo, Raimundo e Sebastião. A esse respeito, sabe-se que: I.Sebastião é mais velho que Raimundo. II.Francisco é mais novo que Paulo. III.Paulo é mais velho que Raimundo. Assim, é obrigatoriamente verdadeiro que: ";
 
                     BtnR1.Text = "Paulo é o mais velho.";
                     BtnR2.Text = "Raimundo é o mais novo.";
@@ -155,7 +155,7 @@ namespace TCC.Forms
                     break;
 
                 case 8:
-                    LblPergunta.Text = "Complete o padrão: 1, 3, 5, 7 ...";
+                    LblPergunta.Text = "8. Complete o padrão: 1, 3, 5, 7 ...";
 
                     BtnR1.Text = "9";
                     BtnR2.Text = "8";
@@ -176,7 +176,7 @@ namespace TCC.Forms
                     break;
 
                 case 9:
-                    LblPergunta.Text = "Complete o padrão: 1, 2, 3, 6, 7, 8, 21, 22, 23, 66, 67, 68 ...";
+                    LblPergunta.Text = "9. Complete o padrão: 1, 2, 3, 6, 7, 8, 21, 22, 23, 66, 67, 68 ...";
 
                     BtnR1.Text = "200";
                     BtnR2.Text = "133";
@@ -188,7 +188,7 @@ namespace TCC.Forms
                     break;
 
                 case 10:
-                    LblPergunta.Text = "Qual dos padrões abaixo abaixo está incorreto de acordo com os outros?";
+                    LblPergunta.Text = "10. Qual dos padrões abaixo abaixo está incorreto de acordo com os outros?";
 
                     BtnR1.Text = "ABCD";
                     BtnR2.Text = "MNOP";
@@ -200,7 +200,7 @@ namespace TCC.Forms
                     break;
 
                 case 11:
-                    LblPergunta.Text = "Qual dos padrões abaixo abaixo está incorreto de acordo com os outros?";
+                    LblPergunta.Text = "11. Qual dos padrões abaixo abaixo está incorreto de acordo com os outros?";
 
                     BtnR1.Text = "MMNM";
                     BtnR2.Text = "IIKO";
@@ -242,8 +242,17 @@ namespace TCC.Forms
             {
                 score++;
             }
-            questionNumber++;
-            FazerPergunta(questionNumber);
+            if (questionNumber <= 11)
+            {
+                questionNumber++;
+                FazerPergunta(questionNumber);
+            }
+            else
+            {
+                UserDados.Pontuacao = score;
+                FrmPontuacaoLogica frm = new FrmPontuacaoLogica();
+                frm.Show();
+            }
         }
 
         private void TirarFill(object sender, EventArgs e)

@@ -40,6 +40,7 @@ namespace APP.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.PnlPontos = new Guna.UI2.WinForms.Guna2Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.PbA2 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.LblAvan2 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@ namespace APP.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.PbAdicao = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.LblAdicao = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.PnlOptions.SuspendLayout();
             this.PnlPontos.SuspendLayout();
             this.PbA2.SuspendLayout();
@@ -69,7 +69,7 @@ namespace APP.Forms
             this.LblNome.AutoSize = true;
             this.LblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNome.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LblNome.Location = new System.Drawing.Point(145, 261);
+            this.LblNome.Location = new System.Drawing.Point(19, 224);
             this.LblNome.Name = "LblNome";
             this.LblNome.Size = new System.Drawing.Size(62, 24);
             this.LblNome.TabIndex = 14;
@@ -83,7 +83,7 @@ namespace APP.Forms
             this.LblIdade.AutoSize = true;
             this.LblIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblIdade.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LblIdade.Location = new System.Drawing.Point(145, 203);
+            this.LblIdade.Location = new System.Drawing.Point(19, 297);
             this.LblIdade.Name = "LblIdade";
             this.LblIdade.Size = new System.Drawing.Size(57, 24);
             this.LblIdade.TabIndex = 13;
@@ -97,7 +97,7 @@ namespace APP.Forms
             this.LblEmail.AutoSize = true;
             this.LblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblEmail.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LblEmail.Location = new System.Drawing.Point(145, 149);
+            this.LblEmail.Location = new System.Drawing.Point(19, 154);
             this.LblEmail.Name = "LblEmail";
             this.LblEmail.Size = new System.Drawing.Size(63, 24);
             this.LblEmail.TabIndex = 12;
@@ -111,7 +111,7 @@ namespace APP.Forms
             this.LblUser.AutoSize = true;
             this.LblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUser.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LblUser.Location = new System.Drawing.Point(145, 91);
+            this.LblUser.Location = new System.Drawing.Point(19, 87);
             this.LblUser.Name = "LblUser";
             this.LblUser.Size = new System.Drawing.Size(97, 24);
             this.LblUser.TabIndex = 11;
@@ -130,10 +130,10 @@ namespace APP.Forms
             this.PnlOptions.Controls.Add(this.label3);
             this.PnlOptions.Controls.Add(this.LblEmail);
             this.PnlOptions.Controls.Add(this.label4);
-            this.PnlOptions.Location = new System.Drawing.Point(6, 70);
+            this.PnlOptions.Location = new System.Drawing.Point(8, 48);
             this.PnlOptions.Name = "PnlOptions";
             this.PnlOptions.ShadowDecoration.Parent = this.PnlOptions;
-            this.PnlOptions.Size = new System.Drawing.Size(306, 323);
+            this.PnlOptions.Size = new System.Drawing.Size(306, 353);
             this.PnlOptions.TabIndex = 19;
             // 
             // label5
@@ -144,7 +144,7 @@ namespace APP.Forms
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label5.Location = new System.Drawing.Point(43, 24);
+            this.label5.Location = new System.Drawing.Point(43, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(209, 24);
             this.label5.TabIndex = 19;
@@ -158,11 +158,11 @@ namespace APP.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(19, 261);
+            this.label1.Location = new System.Drawing.Point(19, 195);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 24);
+            this.label1.Size = new System.Drawing.Size(67, 24);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Nome";
+            this.label1.Text = "Nome:";
             // 
             // label2
             // 
@@ -172,11 +172,11 @@ namespace APP.Forms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(19, 91);
+            this.label2.Location = new System.Drawing.Point(19, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 24);
+            this.label2.Size = new System.Drawing.Size(102, 24);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Username";
+            this.label2.Text = "Username:";
             // 
             // label3
             // 
@@ -186,11 +186,11 @@ namespace APP.Forms
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(19, 203);
+            this.label3.Location = new System.Drawing.Point(19, 267);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 24);
+            this.label3.Size = new System.Drawing.Size(62, 24);
             this.label3.TabIndex = 17;
-            this.label3.Text = "Idade";
+            this.label3.Text = "Idade:";
             // 
             // label4
             // 
@@ -200,11 +200,11 @@ namespace APP.Forms
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label4.Location = new System.Drawing.Point(19, 149);
+            this.label4.Location = new System.Drawing.Point(19, 126);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 24);
+            this.label4.Size = new System.Drawing.Size(68, 24);
             this.label4.TabIndex = 16;
-            this.label4.Text = "E-mail";
+            this.label4.Text = "E-mail:";
             // 
             // PnlPontos
             // 
@@ -219,11 +219,25 @@ namespace APP.Forms
             this.PnlPontos.Controls.Add(this.PbSub);
             this.PnlPontos.Controls.Add(this.label6);
             this.PnlPontos.Controls.Add(this.PbAdicao);
-            this.PnlPontos.Location = new System.Drawing.Point(330, 70);
+            this.PnlPontos.Location = new System.Drawing.Point(332, 48);
             this.PnlPontos.Name = "PnlPontos";
             this.PnlPontos.ShadowDecoration.Parent = this.PnlPontos;
-            this.PnlPontos.Size = new System.Drawing.Size(320, 323);
+            this.PnlPontos.Size = new System.Drawing.Size(320, 353);
             this.PnlPontos.TabIndex = 20;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label7.Location = new System.Drawing.Point(108, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 24);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Pontuação";
             // 
             // label11
             // 
@@ -233,7 +247,7 @@ namespace APP.Forms
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label11.Location = new System.Drawing.Point(193, 192);
+            this.label11.Location = new System.Drawing.Point(193, 206);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(79, 17);
             this.label11.TabIndex = 26;
@@ -247,7 +261,7 @@ namespace APP.Forms
             this.PbA2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.PbA2.ForeColor = System.Drawing.Color.White;
             this.PbA2.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
-            this.PbA2.Location = new System.Drawing.Point(194, 212);
+            this.PbA2.Location = new System.Drawing.Point(194, 226);
             this.PbA2.Minimum = 0;
             this.PbA2.Name = "PbA2";
             this.PbA2.ProgressColor = System.Drawing.Color.Cyan;
@@ -285,7 +299,7 @@ namespace APP.Forms
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label9.Location = new System.Drawing.Point(35, 192);
+            this.label9.Location = new System.Drawing.Point(35, 206);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(79, 17);
             this.label9.TabIndex = 24;
@@ -299,7 +313,7 @@ namespace APP.Forms
             this.PbA1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.PbA1.ForeColor = System.Drawing.Color.White;
             this.PbA1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
-            this.PbA1.Location = new System.Drawing.Point(36, 212);
+            this.PbA1.Location = new System.Drawing.Point(36, 226);
             this.PbA1.Minimum = 0;
             this.PbA1.Name = "PbA1";
             this.PbA1.ProgressColor = System.Drawing.Color.Cyan;
@@ -337,7 +351,7 @@ namespace APP.Forms
             this.LblSub.AutoSize = true;
             this.LblSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblSub.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LblSub.Location = new System.Drawing.Point(199, 57);
+            this.LblSub.Location = new System.Drawing.Point(199, 65);
             this.LblSub.Name = "LblSub";
             this.LblSub.Size = new System.Drawing.Size(73, 17);
             this.LblSub.TabIndex = 22;
@@ -351,7 +365,7 @@ namespace APP.Forms
             this.PbSub.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.PbSub.ForeColor = System.Drawing.Color.White;
             this.PbSub.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
-            this.PbSub.Location = new System.Drawing.Point(194, 77);
+            this.PbSub.Location = new System.Drawing.Point(194, 85);
             this.PbSub.Minimum = 0;
             this.PbSub.Name = "PbSub";
             this.PbSub.ProgressColor = System.Drawing.Color.Cyan;
@@ -389,7 +403,7 @@ namespace APP.Forms
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label6.Location = new System.Drawing.Point(50, 57);
+            this.label6.Location = new System.Drawing.Point(50, 65);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 17);
             this.label6.TabIndex = 20;
@@ -403,7 +417,7 @@ namespace APP.Forms
             this.PbAdicao.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.PbAdicao.ForeColor = System.Drawing.Color.White;
             this.PbAdicao.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(35)))), ((int)(((byte)(80)))));
-            this.PbAdicao.Location = new System.Drawing.Point(36, 77);
+            this.PbAdicao.Location = new System.Drawing.Point(36, 85);
             this.PbAdicao.Minimum = 0;
             this.PbAdicao.Name = "PbAdicao";
             this.PbAdicao.ProgressColor = System.Drawing.Color.Cyan;
@@ -432,20 +446,6 @@ namespace APP.Forms
             this.LblAdicao.Size = new System.Drawing.Size(36, 13);
             this.LblAdicao.TabIndex = 21;
             this.LblAdicao.Text = "00/00";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label7.Location = new System.Drawing.Point(108, 24);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 24);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Pontuação";
             // 
             // FrmConfiguracoes
             // 

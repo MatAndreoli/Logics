@@ -156,11 +156,9 @@ namespace TCC.Forms
             }
             else
             {
+                Reinicia();
                 timer1.Stop();
-                LblTime.Text = "Acabou o tempo.";
-                TbResposta.Text = (num1 + num2).ToString();
-                TbResposta.ReadOnly = true;
-                BtnChecar.Enabled = false;
+                MessageBox.Show("Acabou o tempo. \nTodos os pontos foram anulados, tente novamente.");
             }
         }
 
