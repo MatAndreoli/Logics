@@ -95,6 +95,7 @@ namespace TCC.Forms
                             ad.Avancado1Update(certas, errado);
                             FrmParabens frmPara = new FrmParabens();
                             frmPara.Show();
+                            Reinicia();
                         }
                     }
                     else
