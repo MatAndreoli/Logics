@@ -17,7 +17,7 @@ namespace TCC.Forms
     public partial class FrmProblemas : Form
     {
         private ThemeColor cl = new ThemeColor();
-        private int correctAnswer, questionNumber = 1, score;
+        private int correctAnswer, questionNumber, score;
 
         public FrmProblemas()
         {
@@ -225,6 +225,7 @@ namespace TCC.Forms
         private void FrmProblemas_Load(object sender, EventArgs e)
         {
             IpbExplic.IconColor = ThemeColor.PrimaryColor;
+            MessageBox.Show("Clique em um botão para começar");
         }
 
         private void IpbExplic_Click(object sender, EventArgs e)
@@ -242,7 +243,7 @@ namespace TCC.Forms
             {
                 score++;
             }
-            if (questionNumber <= 11)
+            if (questionNumber < 11)
             {
                 questionNumber++;
                 FazerPergunta(questionNumber);
