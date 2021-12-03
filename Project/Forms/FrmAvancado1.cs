@@ -294,6 +294,7 @@ namespace TCC.Forms
         {
             Transition.HideSync(PnlGame);
             Transition.ShowSync(PnlOptions);
+            Reinicia();
         }
 
         private void BtnMulti_Click(object sender, EventArgs e)
