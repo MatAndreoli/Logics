@@ -12,10 +12,10 @@ namespace APP
     public partial class FrmMain : Form
     {
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
+        private static extern void ReleaseCapture();
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(IntPtr hwnd, int wmsg, int wparam, int lparam);
+        private static extern void SendMessage(IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         #region Variables and Instances
 
@@ -27,6 +27,7 @@ namespace APP
         private UpdateSubtracao upS = new UpdateSubtracao();
         private UpdateAvancado1 upA1 = new UpdateAvancado1();
         private UpdateAvancado2 upA2 = new UpdateAvancado2();
+        private ThemeColor cl = new ThemeColor();
 
         #endregion Variables and Instances
 
@@ -146,6 +147,14 @@ namespace APP
             upS.GetAcertoErro(UserDados.Login);
             upA1.GetAcertoErro(UserDados.Login);
             upA2.GetAcertoErro(UserDados.Login);
+            foreach (Control ctr in PnPai.Controls)
+            {
+                if (ctr is IconPictureBox iconPictureBox)
+                {
+                    IconPictureBox ic = iconPictureBox;
+                    ic.IconColor = cl.SelectColor();
+                }
+            }
         }
 
         private void IbtnLogout_Click(object sender, EventArgs e)

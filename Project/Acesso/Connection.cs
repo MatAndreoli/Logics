@@ -11,11 +11,11 @@ namespace APP.Acesso
 {
     internal class Connection
     {
-        private readonly static string path = AppDomain.CurrentDomain.BaseDirectory.ToString();
-        private readonly static string nameBD = "Usuario.accdb";
-        private readonly static string pathBD = path;
-        private readonly static string staticConnection = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Matheus\Desktop\Progs\GitHub\Logics\Project\Usuario.accdb";
-        private readonly static string relativeConnection = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + pathBD + nameBD;
+        private static readonly string path = AppDomain.CurrentDomain.BaseDirectory.ToString();
+        private static readonly string nameBD = "Usuario.accdb";
+        private static readonly string pathBD = path;
+        private static readonly string staticConnection = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Matheus\Desktop\Progs\GitHub\Logics\Project\Usuario.accdb";
+        private static readonly string relativeConnection = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + pathBD + nameBD;
         private readonly OleDbConnection connection = new OleDbConnection();
 
         public Connection()
