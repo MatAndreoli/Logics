@@ -59,7 +59,7 @@ namespace APP.Forms
             this.LblUsername.AutoSize = true;
             this.LblUsername.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUsername.ForeColor = System.Drawing.Color.Gainsboro;
-            this.LblUsername.Location = new System.Drawing.Point(262, 279);
+            this.LblUsername.Location = new System.Drawing.Point(358, 279);
             this.LblUsername.Name = "LblUsername";
             this.LblUsername.Size = new System.Drawing.Size(174, 39);
             this.LblUsername.TabIndex = 2;

@@ -425,9 +425,9 @@ namespace TCC.Forms
             this.LblTexto.IsSelectionEnabled = false;
             this.LblTexto.Location = new System.Drawing.Point(255, 136);
             this.LblTexto.Name = "LblTexto";
-            this.LblTexto.Size = new System.Drawing.Size(278, 23);
+            this.LblTexto.Size = new System.Drawing.Size(288, 23);
             this.LblTexto.TabIndex = 24;
-            this.LblTexto.Text = "Você completo o jogo. Muito bem!!!";
+            this.LblTexto.Text = "Você completou o jogo. Muito bem!!!";
             // 
             // LblTitle
             // 
