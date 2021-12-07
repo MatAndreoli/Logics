@@ -17,7 +17,7 @@ namespace TCC.Forms
     public partial class FrmProblemas : Form
     {
         private ThemeColor cl = new ThemeColor();
-        private int correctAnswer, questionNumber, score;
+        private int correctAnswer, questionNumber;
 
         public FrmProblemas()
         {
@@ -37,6 +37,15 @@ namespace TCC.Forms
                     BtnR2.Text = "100";
                     BtnR3.Text = "10";
                     BtnR4.Text = "50";
+
+                    BtnR1.Size = new Size(132, 38);
+                    BtnR2.Size = new Size(132, 38);
+                    BtnR3.Size = new Size(132, 38);
+                    BtnR4.Size = new Size(132, 38);
+                    BtnR1.Location = new Point(118, 271);
+                    BtnR2.Location = new Point(386, 271);
+                    BtnR3.Location = new Point(118, 373);
+                    BtnR4.Location = new Point(386, 373);
 
                     correctAnswer = 1;
                     NQuestao.NQuest = 1;
@@ -225,7 +234,6 @@ namespace TCC.Forms
         private void FrmProblemas_Load(object sender, EventArgs e)
         {
             IpbExplic.IconColor = ThemeColor.PrimaryColor;
-            MessageBox.Show("Clique em um botão para começar");
         }
 
         private void IpbExplic_Click(object sender, EventArgs e)
@@ -239,9 +247,9 @@ namespace TCC.Forms
             var objectSender = (Guna2Button)sender;
             int btnTag = Convert.ToInt32(objectSender.Tag);
 
-            if (btnTag == correctAnswer)
+            if (btnTag != correctAnswer)
             {
-                score++;
+                questionNumber = 0;
             }
             if (questionNumber < 11)
             {
@@ -250,9 +258,8 @@ namespace TCC.Forms
             }
             else
             {
-                UserDados.Pontuacao = score;
-                FrmPontuacaoLogica frm = new FrmPontuacaoLogica();
-                frm.Show();
+                FrmParabens frmPara = new FrmParabens();
+                frmPara.Show();
             }
         }
 

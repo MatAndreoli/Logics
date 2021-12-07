@@ -167,7 +167,7 @@ namespace TCC.Forms
                     num2 = rand.Next(1, 10);
                     num3 = rand.Next(1, 10);
                     num4 = rand.Next(1, 10);
-                    LblN1.Text = num1.ToString() + " + " + num2.ToString() + " + (" + num3.ToString() + " * " + num4.ToString() + ")";
+                    LblN1.Text = num1.ToString() + " + " + num2.ToString() + " + " + num3.ToString() + " * " + num4.ToString();
                     break;
             }
         }
@@ -253,7 +253,7 @@ namespace TCC.Forms
             Transition.HideSync(PnlOptions);
             Transition.ShowSync(PnlGame);
             BtnNivel = BtnExpre.Text;
-            LblN1.Text = "0 + 0 + (0 * 0)";
+            LblN1.Text = "0 + 0 + 0 * 0";
         }
 
         private void BtnExpre_MouseEnter(object sender, EventArgs e)

@@ -106,9 +106,9 @@ namespace TCC.Forms
             this.guna2HtmlLabel2.IsSelectionEnabled = false;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(388, 182);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(104, 23);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(92, 23);
             this.guna2HtmlLabel2.TabIndex = 22;
-            this.guna2HtmlLabel2.Text = "3 + 5 + (3 * 9)";
+            this.guna2HtmlLabel2.Text = "3 + 5 + 3 * 9";
             // 
             // LblMultiExp
             // 
