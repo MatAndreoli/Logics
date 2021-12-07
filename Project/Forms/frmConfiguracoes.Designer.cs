@@ -457,7 +457,7 @@ namespace APP.Forms
             this.Controls.Add(this.PnlOptions);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmConfiguracoes";
-            this.Text = "Configurações";
+            this.Text = "Perfil";
             this.Load += new System.EventHandler(this.FrmConfiguracoes_Load);
             this.PnlOptions.ResumeLayout(false);
             this.PnlOptions.PerformLayout();
