@@ -31,6 +31,7 @@ namespace APP.Classes
                 Adicao point = new Adicao(user);
                 Subtracao sub = new Subtracao(user);
                 Avancado1 ava = new Avancado1(user);
+                Avancado2 ava2 = new Avancado2(user);
                 cmd.Connection = conn.Connect();
                 cmd.ExecuteNonQuery();
                 conn.Disconnect();

@@ -14,13 +14,12 @@ namespace APP.Acesso
         private static readonly string path = AppDomain.CurrentDomain.BaseDirectory.ToString();
         private static readonly string nameBD = "Usuario.accdb";
         private static readonly string pathBD = path;
-        private static readonly string staticConnection = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Matheus\Desktop\Progs\GitHub\Logics\Project\Usuario.accdb";
-        private static readonly string relativeConnection = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + pathBD + nameBD;
+        private static readonly string relativeConnection = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + pathBD + nameBD;
         private readonly OleDbConnection connection = new OleDbConnection();
 
         public Connection()
         {
-            connection.ConnectionString = staticConnection;
+            connection.ConnectionString = relativeConnection;
         }
 
         public OleDbConnection Connect()
